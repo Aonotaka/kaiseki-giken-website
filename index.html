@@ -1,48 +1,105 @@
-<!-- filepath: /kaiseki-giken-website/kaiseki-giken-website/public/lp.html -->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>樹脂流動解析技研 | 射出成型シミュレーション</title>
+    <title>Kaiseki Giken | Injection Molding Simulation</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .lang-switch-btn { margin: 1em 0; padding: 0.5em 1em; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>樹脂流動解析技研</h1>
-        <p>「このまま金型削って大丈夫かな？」の解決策</p>
-    </header>
+    <button class="lang-switch-btn" onclick="switchLang()">
+        日本語 / English
+    </button>
 
-    <section id="about">
-        <h2>射出成型シミュレーションでコスト削減・品質向上</h2>
-        <p>樹脂流動解析（Moldflow）とは、金型設計の最適化や成形品の品質向上を支援する技術です。</p>
-    </section>
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <header>
+            <h1>樹脂流動解析技研</h1>
+            <p>「このまま金型削って大丈夫かな？」の解決策</p>
+        </header>
+        <section id="about">
+            <h2>射出成型シミュレーションでコスト削減・品質向上</h2>
+            <p>樹脂流動解析（Moldflow）とは、金型設計の最適化や成形品の品質向上を支援する技術です。</p>
+        </section>
+        <section id="cases">
+            <h2>解決できる課題</h2>
+            <div class="case">
+                <h3>ケース１：成型後の反りを減らしたい</h3>
+                <p>材料データやゲート位置を解析し、繊維の向きによる収縮率の違いを最小限に抑えます。</p>
+            </div>
+            <div class="case">
+                <h3>ケース２：低トン数の射出成型機で量産したい</h3>
+                <p>必要トン数を計算し、プロセスパラメータ調整を提案。開発初期段階で生産可能性を検証できます。</p>
+            </div>
+        </section>
+        <section id="expert">
+            <h2>解析技研の強み</h2>
+            <ul>
+                <li>ホンダ・GMなどの自動車メーカーとの実績</li>
+                <li>Autodesk Expert Certified 技術者</li>
+                <li>日本語・英語バイリンガル</li>
+                <li>北米のティア１サプライヤーでの実務経験</li>
+            </ul>
+        </section>
+        <footer>
+            <h2>お問い合わせ</h2>
+            <p>Email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
+        </footer>
+    </div>
 
-    <section id="cases">
-        <h2>解決できる課題</h2>
-        <div class="case">
-            <h3>ケース１：成型後の反りを減らしたい</h3>
-            <p>材料データやゲート位置を解析し、繊維の向きによる収縮率の違いを最小限に抑えます。</p>
-        </div>
-        <div class="case">
-            <h3>ケース２：低トン数の射出成型機で量産したい</h3>
-            <p>必要トン数を計算し、プロセスパラメータ調整を提案。開発初期段階で生産可能性を検証できます。</p>
-        </div>
-    </section>
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <header>
+            <h1>Kaiseki Giken</h1>
+            <p>The solution to "Is it really okay to machine the mold as it is?"</p>
+        </header>
+        <section id="about-en">
+            <h2>Reduce Costs and Improve Quality with Injection Molding Simulation</h2>
+            <p>Moldflow analysis supports the optimization of mold design and improvement of product quality.</p>
+        </section>
+        <section id="cases-en">
+            <h2>Problems We Can Solve</h2>
+            <div class="case">
+                <h3>Case 1: Want to reduce warpage after molding</h3>
+                <p>We analyze material data and gate positions to minimize differences in shrinkage rates caused by fiber orientation.</p>
+            </div>
+            <div class="case">
+                <h3>Case 2: Want to mass-produce with a low-tonnage injection molding machine</h3>
+                <p>We calculate the required tonnage and propose process parameter adjustments, verifying manufacturability at the early development stage.</p>
+            </div>
+        </section>
+        <section id="expert-en">
+            <h2>Our Strengths</h2>
+            <ul>
+                <li>Experience with automakers such as Honda and GM</li>
+                <li>Autodesk Expert Certified Engineer</li>
+                <li>Bilingual in Japanese and English</li>
+                <li>Practical experience at Tier 1 suppliers in North America</li>
+            </ul>
+        </section>
+        <footer>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
+        </footer>
+    </div>
 
-    <section id="expert">
-        <h2>解析技研の強み</h2>
-        <ul>
-            <li>ホンダ・GMなどの自動車メーカーとの実績</li>
-            <li>Autodesk Expert Certified 技術者</li>
-            <li>日本語・英語バイリンガル</li>
-            <li>北米のティア１サプライヤーでの実務経験</li>
-        </ul>
-    </section>
-
-    <footer>
-        <h2>お問い合わせ</h2>
-        <p>Email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
-    </footer>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
