@@ -1,0 +1,14 @@
+{
+  "name": "kaiseki-giken-website",
+  "version": "1.0.0",
+  "description": "A website for 樹脂流動解析技研, showcasing injection molding simulation services.",
+  "main": "public/lp.html",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
