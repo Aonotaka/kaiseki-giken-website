@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Moldflow Analysis? Benefits for Injection Molding | Kaiseki Giken</title>
+    <meta name="description" content="An introduction to Moldflow analysis and how it helps manufacturers reduce defects and optimize part design.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .lang-switch-btn {
+            margin: 1em auto 0 auto;
+            display: block;
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch-btn:hover {
+            background: #005580;
+        }
+        .blog-date {
+            color: #888;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-switch-btn" onclick="switchLang()">
+        日本語 / English
+    </button>
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <header>
+            <h1>モールドフロー解析とは？射出成形へのメリット</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2024-06-05</div>
+            <p>
+                モールドフロー解析は、射出成形時に溶融樹脂がどのように流れるかをシミュレーションする技術です。Autodesk Moldflow Insightなどの高度なソフトウェアを用いることで、エアトラップやウェルドライン、ヒケ、反りなどの問題を金型製作前に予測できます。
+            </p>
+            <h2>モールドフロー解析を活用するメリット</h2>
+            <ul>
+                <li>金型試作の手戻りやコストを削減</li>
+                <li>ゲート位置やプロセスパラメータの最適化</li>
+                <li>成形不良を最小限に抑え、品質向上</li>
+                <li>開発期間の短縮と市場投入までのスピードアップ</li>
+            </ul>
+            <p>
+                樹脂流動解析技研では、日本語・英語バイリンガルの専門家が分かりやすく解析結果を説明し、スムーズな開発をサポートします。
+            </p>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2024 樹脂流動解析技研</p>
+        </footer>
+    </div>
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <header>
+            <h1>What is Moldflow Analysis? Benefits for Injection Molding</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2024-06-05</div>
+            <p>
+                Moldflow analysis is a simulation technique used to predict how molten plastic will flow during the injection molding process. By using advanced software such as Autodesk Moldflow Insight, engineers can identify potential issues such as air traps, weld lines, sink marks, and warpage before a mold is manufactured.
+            </p>
+            <h2>Why Use Moldflow Analysis?</h2>
+            <ul>
+                <li>Reduce costly trial-and-error in mold making</li>
+                <li>Optimize gate locations and process parameters</li>
+                <li>Minimize defects and improve part quality</li>
+                <li>Shorten development cycles and speed up time-to-market</li>
+            </ul>
+            <p>
+                At Kaiseki Giken, our bilingual experts provide detailed Moldflow analysis and clear communication in both Japanese and English, ensuring your project runs smoothly from start to finish.
+            </p>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2024 Kaiseki Giken</p>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

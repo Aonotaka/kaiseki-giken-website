@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Kaiseki Giken</title>
+    <meta name="description" content="Discover Kaiseki Giken's bilingual Moldflow analysis, quick tonnage prediction, and part design optimization services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        .services-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .service-list {
+            margin-bottom: 2em;
+        }
+        .service-list h3 {
+            margin-top: 1.5em;
+            color: #0072b1;
+        }
+        .workflow-list {
+            padding-left: 1.2em;
+        }
+        .cta-box {
+            background: #f4f4f4;
+            padding: 1em;
+            border-left: 4px solid #4CAF50;
+            margin: 2em 0;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .lang-switch-btn {
+            margin: 1em auto 0 auto;
+            display: block;
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch-btn:hover {
+            background: #005580;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5em;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0072b1;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-switch-btn" onclick="switchLang()">
+        日本語 / English
+    </button>
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <header>
+            <h1>サービス内容</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="services-container">
+            <section class="service-list">
+                <h2>主なサービス</h2>
+                <h3>モールドフロー解析</h3>
+                <p>Autodesk Moldflow Insightを用いて、成形時の潜在的な問題や反りを予測するフル解析を実施します。</p>
+                <h3>トン数簡易予測サービス</h3>
+                <p>フィルパック解析により、必要なトン数を予測し、成形機選定をサポートします。ご要望に応じて、部品設計・ゲート位置・プロセスパラメータの最適化によるトン数削減もご提案します。</p>
+                <h3>部品設計最適化・アップデート</h3>
+                <p>モールドフロー解析レポートに基づき、さらなる設計最適化のための部品設計アップデートを行います。</p>
+            </section>
+            <section>
+                <h2>ご依頼から納品までの流れ</h2>
+                <ol class="workflow-list">
+                    <li>お客様より初期部品設計データをご提供いただきます。</li>
+                    <li>ゲート位置制約の確認とDFM（製造性）簡易解析を実施。</li>
+                    <li>モールドフロー結果をお客様とレビューし、解決すべき課題を特定。</li>
+                    <li>新設計・プロセスパラメータ・ゲート位置の評価のため追加解析を実施。</li>
+                    <li>モールドフローレポートおよびMoldflow Communicatorファイルを納品。</li>
+                </ol>
+            </section>
+            <section>
+                <h2>認証・使用ツール</h2>
+                <ul>
+                    <li>Autodesk Moldflow Expert Certification</li>
+                    <li>Autodesk Moldflow Insight</li>
+                </ul>
+            </section>
+            <section>
+                <h2>料金・お見積り</h2>
+                <p>価格はご要望に応じてご案内します。初期設計やご要望をお送りいただければ、迅速にお見積りいたします。</p>
+            </section>
+            <section class="cta-box">
+                <h2>お問い合わせ・ご依頼</h2>
+                <p>サービスのご依頼やお見積りは、メールまたは「お問い合わせ」よりご連絡ください。<br>
+                <strong>必要事項：</strong>お名前、ご連絡先、会社名、送付データ、プロジェクト概要</p>
+                <p>Email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2024 樹脂流動解析技研</p>
+        </footer>
+    </div>
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <header>
+            <h1>Our Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="services-container">
+            <section class="service-list">
+                <h2>Key Services</h2>
+                <h3>Moldflow Analysis</h3>
+                <p>We perform full Moldflow analyses using Autodesk Moldflow Insight to predict any potential issues and warpage.</p>
+                <h3>Quick Tonnage Prediction Service</h3>
+                <p>Using a fill pack analysis, we predict the tonnage required so molders can select a machine for a specific part. Upon request, Kaiseki-Giken also helps customers reduce tonnage by optimizing part design, gate locations, and process parameters.</p>
+                <h3>Part Design Optimization and Update</h3>
+                <p>Based on the Moldflow report, we update the part design for further design optimization.</p>
+            </section>
+            <section>
+                <h2>Process & Workflow</h2>
+                <ol class="workflow-list">
+                    <li>Customers provide a preliminary part design.</li>
+                    <li>We identify gate location limitations and perform preliminary DFM analysis.</li>
+                    <li>Review Moldflow results with customers and identify issues to be resolved.</li>
+                    <li>Perform further Moldflow analyses to evaluate new design, process parameters, or gate locations.</li>
+                    <li>Provide Moldflow report and Moldflow Communicator file.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Certifications & Tools</h2>
+                <ul>
+                    <li>Autodesk Moldflow Expert Certification</li>
+                    <li>Autodesk Moldflow Insight</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Pricing & Quote</h2>
+                <p>Price is provided upon request. Please send your preliminary design and requirements, and we will provide a quote in a timely manner.</p>
+            </section>
+            <section class="cta-box">
+                <h2>Contact / Request a Quote</h2>
+                <p>To request our services or a quote, please email us or use the "Contact Us" section. <br>
+                <strong>Please include:</strong> your name, contact information, company name, data to send, and an overview of your project.</p>
+                <p>Email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2024 Kaiseki Giken</p>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

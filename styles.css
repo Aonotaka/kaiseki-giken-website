@@ -41,3 +41,53 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.cta-btn {
+    display: inline-block;
+    background: #0072b1;
+    color: #fff;
+    padding: 0.7em 1.5em;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1em 0;
+    transition: background 0.2s;
+}
+.cta-btn:hover {
+    background: #005580;
+}
+.contact-form-section {
+    background: #f4f4f4;
+    padding: 2em 1em;
+    margin: 2em 0;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-form-section form label {
+    display: block;
+    margin-bottom: 1em;
+}
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.contact-form-section button {
+    background: #0072b1;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form-section button:hover {
+    background: #005580;
+}
