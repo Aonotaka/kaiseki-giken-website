@@ -43,9 +43,10 @@
             background: #e0f0ff;
             color: #005580;
         }
+        /* Make header a two-row layout: logo/sidebar/lang top, nav links bottom */
         .site-header {
             background: #f8f8f8;
-            padding: 0.8em 0;
+            padding: 0.5em 0 0 0; /* top padding 0.5em */
             border-bottom: 1px solid #e0e0e0;
             width: 100vw;
             min-height: 80px;
@@ -57,45 +58,45 @@
             overflow-x: hidden;
         }
         .header-inner {
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            padding: 0 0.5em;
-            min-height: 80px;
+            padding: 0;
+            min-height: unset;
             box-sizing: border-box;
             margin: 0;
             position: relative;
         }
+        .header-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.5em 0.5em 0 0.5em;
+            box-sizing: border-box;
+        }
         .header-left {
-            justify-self: start;
             display: flex;
             align-items: center;
             gap: 0.5em;
-        }
-        .sidebar-toggle {
-            background: #0072b1;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            padding: 0.3em 0.7em;
-            cursor: pointer;
-            font-size: 1.5em;
-            margin: 0;
-            z-index: 1100;
-            transition: background 0.2s, padding 0.2s, font-size 0.2s;
-            min-width: 36px;
-            min-height: 36px;
-            width: auto;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .header-logo {
             display: flex;
             align-items: center;
             margin-left: 0;
+        }
+        .lang-switch-group {
+            display: flex;
+            gap: 0.5em;
+            position: static;
+            transform: none;
+        }
+        .header-nav-row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #e0e0e0;
+            background: #f8f8f8;
         }
         .header-nav {
             justify-self: center;
@@ -105,7 +106,7 @@
             gap: 2em;
             list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 0.5em 0;
         }
         .header-nav ul li {
             display: block;
@@ -124,23 +125,16 @@
             background: #e0f0ff;
             color: #005580;
         }
-        .lang-switch-group {
-            justify-self: end;
-            display: flex;
-            gap: 0.5em;
-            position: static;
-            transform: none;
-        }
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
             height: 100%;
-            width: 260px; /* Reduced width */
+            width: 260px;
             background: #f8f8f8;
             border-right: 1px solid #ddd;
-            padding-top: 2em;
-            transform: translateX(-260px); /* Match new width */
+            padding-top: 1em; /* Match header top padding */
+            transform: translateX(-260px);
             transition: transform 0.2s;
             z-index: 2000;
             box-sizing: border-box;
@@ -197,16 +191,10 @@
             background: #e0f0ff;
         }
         @media (max-width: 800px) {
-            .header-inner {
+            .header-top-row, .header-nav-row {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 0.5em;
-                min-height: 80px;
-                justify-content: flex-start;
-            }
-            .header-left {
-                justify-content: flex-start;
-                margin-bottom: 0.5em;
             }
             .header-nav ul {
                 gap: 1em;
@@ -233,6 +221,35 @@
         body.sidebar-open {
             margin-left: 0;
             transition: none;
+        }
+        .sidebar-toggle {
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.3em 0.7em;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin: 0;
+            min-width: 36px;
+            min-height: 36px;
+            width: auto;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, padding 0.2s, font-size 0.2s;
+        }
+        .sidebar-toggle:hover {
+            background: #005580;
+        }
+        @media (max-width: 600px) {
+            .sidebar-toggle {
+                padding: 0.2em 0.5em;
+                font-size: 1.2em;
+                min-width: 32px;
+                min-height: 32px;
+            }
         }
     </style>
     <!-- Structured Data: Organization -->
@@ -271,25 +288,29 @@
     <!-- HEADER: Center nav links, logo left, lang switch right -->
     <header class="site-header">
         <div class="header-inner">
-            <div class="header-left">
-                <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
-                    </a>
+            <div class="header-top-row">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        </a>
+                    </div>
+                </div>
+                <div class="lang-switch-group">
+                    <a href="index.html" class="lang-switch-btn" id="lang-ja">日本語</a>
+                    <a href="index.html" class="lang-switch-btn" id="lang-en">English</a>
                 </div>
             </div>
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="index.html" id="nav-home">ホーム</a></li>
-                    <li><a href="about.html" id="nav-about">会社概要</a></li>
-                    <li><a href="services.html" id="nav-services">サービス</a></li>
-                    <li><a href="blog.html" id="nav-blog">ブログ</a></li>
-                </ul>
-            </nav>
-            <div class="lang-switch-group">
-                <a href="index.html" class="lang-switch-btn" id="lang-ja">日本語</a>
-                <a href="index.html" class="lang-switch-btn" id="lang-en">English</a>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" id="nav-home">ホーム</a></li>
+                        <li><a href="about.html" id="nav-about">会社概要</a></li>
+                        <li><a href="services.html" id="nav-services">サービス</a></li>
+                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -299,7 +320,7 @@
         <div class="sidebar-logo-row">
             <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
             <a href="index.html" class="sidebar-logo">
-                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="160" height="50">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
             </a>
         </div>
         <ul>
