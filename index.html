@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
+        /* Remove all possible gaps on the right and left of the header */
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .lang-section { display: none; }
         .lang-section.active { display: block; }
         .lang-switch-btn {
@@ -46,86 +53,52 @@
             left: 0;
             right: 0;
             position: relative;
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         .header-inner {
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
             align-items: center;
-            justify-content: center; /* Center all children horizontally */
             width: 100%;
-            padding: 0;
-            position: relative;
+            padding: 0 0.5em;
             min-height: 80px;
-            gap: 1em;
             box-sizing: border-box;
+            margin: 0;
+            position: relative;
         }
-        .header-logo {
-            flex: 0 0 auto;
+        .header-left {
+            justify-self: start;
             display: flex;
             align-items: center;
-            margin-right: 2em;
-        }
-        .header-nav {
-            flex: 0 1 auto;
-            display: flex;
-            justify-content: center;
-        }
-        .header-nav ul {
-            display: flex;
-            gap: 2em;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .header-nav ul li {
-            display: block;
-        }
-        .header-nav a {
-            color: #0072b1;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            padding: 0.5em 0.8em;
-            border-radius: 4px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .header-nav a:hover,
-        .header-nav a.active {
-            background: #e0f0ff;
-            color: #005580;
-        }
-        .lang-switch-group {
-            display: flex;
             gap: 0.5em;
-            position: absolute;
-            right: 1em;
-            top: 50%;
-            transform: translateY(-50%);
         }
         .sidebar-toggle {
             background: #0072b1;
             color: #fff;
             border: none;
             border-radius: 4px;
-            padding: 0.5em 1em;
+            padding: 0.3em 0.7em;
             cursor: pointer;
             font-size: 1.5em;
-            margin-right: 1em;
-            margin-left: 0;
+            margin: 0;
             z-index: 1100;
-            transition: background 0.2s;
-        }
-        .sidebar-toggle:hover {
-            background: #005580;
-        }
-        .header-logo {
-            flex: 0 0 auto;
+            transition: background 0.2s, padding 0.2s, font-size 0.2s;
+            min-width: 36px;
+            min-height: 36px;
+            width: auto;
+            box-sizing: border-box;
             display: flex;
             align-items: center;
+            justify-content: center;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            margin-left: 0;
         }
         .header-nav {
-            flex: 1 1 0;
-            display: flex;
-            justify-content: center;
+            justify-self: center;
         }
         .header-nav ul {
             display: flex;
@@ -152,23 +125,22 @@
             color: #005580;
         }
         .lang-switch-group {
+            justify-self: end;
             display: flex;
             gap: 0.5em;
-            position: absolute;
-            right: 1em;
-            top: 50%;
-            transform: translateY(-50%);
+            position: static;
+            transform: none;
         }
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
             height: 100%;
-            width: 340px;
+            width: 260px; /* Reduced width */
             background: #f8f8f8;
             border-right: 1px solid #ddd;
             padding-top: 2em;
-            transform: translateX(-340px);
+            transform: translateX(-260px); /* Match new width */
             transition: transform 0.2s;
             z-index: 2000;
             box-sizing: border-box;
@@ -181,11 +153,10 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 1em 1em 1em;
+            flex-direction: row; /* X left, logo right */
         }
-        .sidebar-logo img {
-            width: 160px;
-            height: auto;
-            display: block;
+        .sidebar-logo {
+            margin-left: 1em;
         }
         .sidebar-close {
             background: none;
@@ -195,7 +166,7 @@
             cursor: pointer;
             padding: 0 0.2em;
             line-height: 1;
-            margin-left: 0.5em;
+            margin-right: 0.5em;
             transition: color 0.2s;
         }
         .sidebar-close:hover {
@@ -233,8 +204,8 @@
                 min-height: 80px;
                 justify-content: flex-start;
             }
-            .header-logo {
-                margin-right: 0;
+            .header-left {
+                justify-content: flex-start;
                 margin-bottom: 0.5em;
             }
             .header-nav ul {
@@ -251,9 +222,9 @@
                 margin-bottom: 0.5em;
             }
             .sidebar {
-                width: 90vw;
-                min-width: 180px;
-                transform: translateX(-90vw);
+                width: 70vw;
+                min-width: 140px;
+                transform: translateX(-70vw);
             }
             .sidebar.open {
                 transform: translateX(0);
@@ -300,11 +271,13 @@
     <!-- HEADER: Center nav links, logo left, lang switch right -->
     <header class="site-header">
         <div class="header-inner">
-            <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
-            <div class="header-logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
-                </a>
+            <div class="header-left">
+                <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                    </a>
+                </div>
             </div>
             <nav class="header-nav">
                 <ul>
@@ -321,13 +294,13 @@
         </div>
     </header>
 
-    <!-- SIDEBAR: Move X button to the right side -->
+    <!-- SIDEBAR: X button at the left, logo at the right -->
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
             <a href="index.html" class="sidebar-logo">
                 <img src="logo.png" alt="Kaiseki Giken ロゴ" width="160" height="50">
             </a>
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
         </div>
         <ul>
             <li><a href="index.html">ホーム</a></li>
