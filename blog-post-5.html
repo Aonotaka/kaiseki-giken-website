@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residual Stress and Warpage in Plastic Injection Molding | Kaiseki Giken</title>
+    <meta name="description" content="Learn about residual stress and how it leads to warpage in plastic injection molding. Discover the causes, modeling, and mitigation strategies for warpage issues in molded parts. Bilingual Japanese/English.">
+    <meta name="keywords" content="residual stress, warpage, injection molding, plastic, simulation, process optimization, Moldflow, stress relaxation, birefringence, packing pressure, cooling, Kaiseki Giken, bilingual, Japanese, English">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .lang-switch-btn {
+            margin: 1em auto 0 auto;
+            display: block;
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch-btn:hover {
+            background: #005580;
+        }
+        .about-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+        .about-logo img {
+            width: 180px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+        }
+        .about-logo h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #333;
+            text-align: center;
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5em;
+            justify-content: center;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0072b1;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #0072b1;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 1em 0;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: #005580;
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-switch-btn" onclick="switchLang()">
+        日本語 / English
+    </button>
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <header>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ">
+                <h1>射出成形における残留応力と反りの発生メカニズム</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2025-06-06</div>
+            <h2>はじめに</h2>
+            <p>
+                射出成形は、複雑な形状のプラスチック部品を大量生産できる優れた製造技術ですが、成形品の寸法精度や外観品質に大きな影響を与える「残留応力」と「反り」がしばしば問題となります。本記事では、残留応力の発生メカニズムと、それがどのように反りを引き起こすのかを詳しく解説します。
+            </p>
+            <h2>残留応力とは？</h2>
+            <p>
+                残留応力とは、成形品が室温まで冷却された後も内部に残る応力のことです。外部から力が加わっていなくても、成形プロセス中の温度変化や分子配向、圧力分布などによって発生します。残留応力は、成形品の寸法変化や機械的特性の低下、さらには反りやクラックの原因となります。
+            </p>
+            <h3>残留応力の発生要因</h3>
+            <ul>
+                <li><strong>流動誘起応力：</strong> 充填・保圧工程で高せん断が発生し、分子鎖が流動方向に配向します。冷却時にこの配向が不均一に固定されることで、内部に引張・圧縮応力が生じます。</li>
+                <li><strong>熱誘起応力：</strong> 金型内での冷却速度の違いにより、表層と内部で温度勾配が生じます。外側が急冷される一方、内部はゆっくり冷却されるため、収縮の差が応力となって残ります。</li>
+            </ul>
+            <h2>残留応力と反りの関係</h2>
+            <p>
+                反り（ワーページ）は、成形品が金型から取り出された後に発生する変形現象です。内部応力が不均一に分布している場合、応力が解放されることで部品が曲がったりねじれたりします。
+            </p>
+            <h3>反りが発生するメカニズム</h3>
+            <ul>
+                <li><strong>冷却・収縮の不均一：</strong> 表層は早く固化し、内部は遅れて冷却されるため、収縮差が生じます。これが引張応力や圧縮応力となり、反りの原因となります。</li>
+                <li><strong>分子配向：</strong> 流動方向に配向した分子鎖が、冷却時に固定されることで方向性のある応力が生じ、解放時に反りを引き起こします。</li>
+                <li><strong>保圧条件のばらつき：</strong> 保圧が均一でない場合、応力分布も不均一となり、反りや寸法不良のリスクが高まります。</li>
+            </ul>
+            <h2>射出成形プロセスと残留応力の発生</h2>
+            <ol>
+                <li><strong>充填工程：</strong> 高速で樹脂が流れることで分子配向とせん断応力が発生し、冷却時に「凍結」されます。</li>
+                <li><strong>保圧工程：</strong> 追加の圧力で収縮を補償しますが、圧力分布が不均一だと応力勾配が強まります。</li>
+                <li><strong>冷却工程：</strong> 表層と内部の冷却速度差が収縮差を生み、残留応力の主因となります。</li>
+                <li><strong>離型・冷却後：</strong> 金型から取り出すことで拘束が解放され、内部応力が緩和される際に反りが顕在化します。</li>
+            </ol>
+            <h2>残留応力と反りの測定・シミュレーション</h2>
+            <ul>
+                <li><strong>破壊法：</strong> 層除去法や穴あけ法など、成形品を部分的に除去して変形量から応力分布を推定します。</li>
+                <li><strong>非破壊法：</strong> 光弾性法や複屈折測定など、光学的手法で内部応力を可視化します。</li>
+                <li><strong>シミュレーション：</strong> 有限要素法や粘弾性モデルを用いて、保圧・冷却条件や材料特性を考慮した応力・反りの予測が可能です。</li>
+            </ul>
+            <h2>反りを抑制するためのプロセス最適化</h2>
+            <ul>
+                <li><strong>保圧条件の最適化：</strong> 均一な保圧分布と適切な保圧時間の設定で応力勾配を低減します。</li>
+                <li><strong>金型・樹脂温度の制御：</strong> 高めの金型温度や樹脂温度の精密制御で冷却速度を均一化し、応力の偏りを防ぎます。</li>
+                <li><strong>冷却回路設計：</strong> 効果的な冷却回路で熱除去を均一化し、収縮差を抑制します。</li>
+                <li><strong>材料添加剤の活用：</strong> フィラーや可塑剤の添加で応力緩和性を向上させ、残留応力を低減します。</li>
+            </ul>
+            <h2>まとめ</h2>
+            <p>
+                射出成形における残留応力は、冷却速度差や分子配向、保圧条件のばらつきなど複数要因で発生し、反りや寸法不良の主因となります。これらを理解し、シミュレーションや最適化技術を活用することで、品質向上と歩留まり改善が可能です。
+            </p>
+            <p>
+                詳細は Guevara-Morales, A. & Figueroa-López, U. (2014). <em>Residual stresses in injection molded products</em>, Journal of Materials Science, 49:4399-4415 をご参照ください。
+            </p>
+            <a href="services.html" class="cta-btn">Moldflow解析サービスを見る</a>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2025 樹脂流動解析技研</p>
+        </footer>
+    </div>
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <header>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken logo">
+                <h1>Residual Stress and Warpage in Plastic Injection Molding</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2025-06-06</div>
+            <h2>Introduction</h2>
+            <p>
+                Plastic injection molding is a widely used process for manufacturing complex plastic parts with high precision. However, residual stress and warpage are persistent challenges that can compromise dimensional accuracy and product quality. This article explores the mechanisms of residual stress formation, how it leads to warpage, and strategies for mitigation, referencing the review by Guevara-Morales and Figueroa-López (2014).
+            </p>
+            <h2>What is Residual Stress?</h2>
+            <p>
+                Residual stress refers to internal stresses that remain in a molded part after it cools to room temperature. These stresses are not caused by external forces but are generated during the molding process due to temperature gradients, molecular orientation, and pressure variations. Residual stress can cause dimensional changes, reduce mechanical properties, and lead to warpage or cracking.
+            </p>
+            <h3>How Residual Stress Develops</h3>
+            <ul>
+                <li><strong>Flow-Induced Stress:</strong> During filling and packing, high shear aligns polymer chains in the flow direction. Uneven relaxation during cooling creates regions of tensile and compressive stress.</li>
+                <li><strong>Thermal-Induced Stress:</strong> The outer layers cool faster than the core, resulting in differential contraction. The surface develops compressive stress, while the core is under tension.</li>
+            </ul>
+            <h2>The Relationship Between Residual Stress and Warpage</h2>
+            <p>
+                Warpage is the distortion or bending of a molded part after ejection. When residual stresses are unevenly distributed, their release causes the part to deform. The main mechanisms include:
+            </p>
+            <ul>
+                <li><strong>Differential Cooling and Contraction:</strong> The skin cools and shrinks faster than the core, creating stress gradients that drive warpage.</li>
+                <li><strong>Molecular Orientation:</strong> Directional alignment of polymer chains during flow leads to anisotropic stress, which is released as warpage.</li>
+                <li><strong>Variable Packing Pressure:</strong> Inconsistent packing creates non-uniform stress profiles, increasing the risk of warpage and dimensional errors.</li>
+            </ul>
+            <h2>Process Overview: How Injection Molding Induces Residual Stress</h2>
+            <ol>
+                <li><strong>Filling Stage:</strong> Rapid flow causes high shear and molecular alignment, setting up residual stresses that are frozen during cooling.</li>
+                <li><strong>Packing Stage:</strong> Additional pressure compensates for shrinkage but can intensify stress gradients if not uniform.</li>
+                <li><strong>Cooling Stage:</strong> The difference in cooling rates between the surface and core locks in stress as the part solidifies.</li>
+                <li><strong>Ejection and Post-Cooling:</strong> Once the part is ejected, constraints are released and residual stresses may relax, causing warpage.</li>
+            </ol>
+            <h2>Measurement and Modeling of Residual Stress and Warpage</h2>
+            <ul>
+                <li><strong>Destructive Methods:</strong> Techniques like layer-removal and hole-drilling measure stress by observing deformation after material removal.</li>
+                <li><strong>Non-Destructive Methods:</strong> Optical techniques such as photoelasticity and birefringence visualize stress distributions.</li>
+                <li><strong>Simulation:</strong> Finite element and viscoelastic models predict stress and warpage based on process parameters and material properties.</li>
+            </ul>
+            <h2>Mitigating Warpage: Process Optimization Strategies</h2>
+            <ul>
+                <li><strong>Optimize Packing Pressure and Time:</strong> Uniform packing reduces stress gradients and incomplete relaxation.</li>
+                <li><strong>Control Mold and Melt Temperatures:</strong> Higher and more uniform temperatures promote even cooling and stress distribution.</li>
+                <li><strong>Design Effective Cooling Channels:</strong> Well-designed cooling ensures uniform heat removal and minimizes differential shrinkage.</li>
+                <li><strong>Use Material Additives:</strong> Fillers and plasticizers improve stress relaxation and reduce residual stress.</li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>
+                Residual stress in injection-molded plastics is caused by differential cooling, molecular orientation, and packing pressure variations. When these stresses are not uniform, they lead to warpage and dimensional instability. Understanding these mechanisms and using simulation and process optimization can greatly reduce warpage and improve product quality.
+            </p>
+            <p>
+                For more details, see: Guevara-Morales, A. & Figueroa-López, U. (2014). <em>Residual stresses in injection molded products</em>, Journal of Materials Science, 49:4399-4415.
+            </p>
+            <a href="services.html" class="cta-btn">See Our Moldflow Services</a>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2025 Kaiseki Giken</p>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

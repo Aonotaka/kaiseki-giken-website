@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Molding: The 6-Step Approach for Robust Injection Molding | Kaiseki Giken</title>
+    <meta name="description" content="Learn the 6-step scientific molding process for injection molding, how each step works, and how Moldflow analysis supports robust, repeatable manufacturing. Bilingual Japanese/English.">
+    <meta name="keywords" content="scientific molding, 6-step study, injection molding, process optimization, Moldflow, simulation, molding window, plastic engineering, robust process, defect reduction, V/P transfer, cushion, Kaiseki Giken, bilingual, Japanese, English">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .lang-switch-btn {
+            margin: 1em auto 0 auto;
+            display: block;
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch-btn:hover {
+            background: #005580;
+        }
+        .about-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+        .about-logo img {
+            width: 180px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+        }
+        .about-logo h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #333;
+            text-align: center;
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5em;
+            justify-content: center;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0072b1;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: #0072b1;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 1em 0;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: #005580;
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-switch-btn" onclick="switchLang()">
+        日本語 / English
+    </button>
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <header>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ">
+                <h1>サイエンティフィックモールディング：6ステップで実現する安定成形</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2025-06-06</div>
+            <h2>サイエンティフィックモールディングとは？</h2>
+            <p>
+                サイエンティフィックモールディング（科学的成形）は、射出成形の全工程をデータと分析に基づいて最適化する手法です。経験や勘に頼らず、材料特性や金型内の圧力・温度を数値で管理し、安定した品質と高い再現性を実現します。特に6ステップスタディは、現場での標準化・再現性向上に有効なアプローチです。
+            </p>
+            <h2>6ステップサイエンティフィックモールディングの流れ</h2>
+            <ol>
+                <li>
+                    <strong>1. 充填速度プロファイルの最適化</strong><br>
+                    樹脂の流動性やキャビティ充填挙動を観察し、最適な射出速度プロファイルを決定します。Moldflow解析では、充填バランスやエアトラップの発生リスクを事前に評価できます。
+                </li>
+                <li>
+                    <strong>2. V/P切替点（Velocity/Pressure Transfer）の決定</strong><br>
+                    充填から保圧への切替タイミングを最適化し、ショートショットやバリの発生を防ぎます。圧力センサーやシミュレーションで最適点を特定します。
+                </li>
+                <li>
+                    <strong>3. 保圧プロファイルの最適化</strong><br>
+                    保圧値と保圧時間を調整し、ヒケや寸法精度を最適化します。Moldflowのパッキング解析で、最適な保圧条件を科学的に導き出せます。
+                </li>
+                <li>
+                    <strong>4. 冷却時間の設定</strong><br>
+                    成形品の冷却・固化を十分に行い、反りや残留応力を最小限に抑えます。冷却解析で最適な冷却時間を予測可能です。
+                </li>
+                <li>
+                    <strong>5. クッション量の確認</strong><br>
+                    成形機のスクリュー位置（クッション）を確認し、安定した保圧・充填ができているかを検証します。クッション量が適正でないと、ショートショットや寸法不良の原因となります。
+                </li>
+                <li>
+                    <strong>6. モールディングウィンドウの設定と検証</strong><br>
+                    上記の条件をもとに、安定した品質を得られる成形条件の範囲（モールディングウィンドウ）を決定し、現場での再現性を検証します。Moldflowのウィンドウマップ機能で可視化が可能です。
+                </li>
+            </ol>
+            <h2>各ステップでのMoldflow活用例</h2>
+            <ul>
+                <li>充填・保圧・冷却の各段階でシミュレーションし、最適条件を事前に予測</li>
+                <li>V/P切替点やクッション量の最適化をデータで裏付け</li>
+                <li>モールディングウィンドウを可視化し、現場での条件変動に強いプロセスを構築</li>
+            </ul>
+            <h2>サイエンティフィックモールディングのメリット</h2>
+            <ul>
+                <li>不良率の低減と品質の安定化</li>
+                <li>トライ＆エラーの削減によるコストダウン</li>
+                <li>量産立ち上げのリードタイム短縮</li>
+                <li>現場での再現性・標準化の向上</li>
+            </ul>
+            <h2>樹脂流動解析技研のサポート</h2>
+            <p>
+                当社では、Autodesk Moldflow Expert Certified技術者が6ステップサイエンティフィックモールディングの全工程をサポート。日本語・英語バイリンガルで分かりやすいレポートと最適条件提案を提供します。<br>
+                科学的アプローチで安定生産を実現したい方は、ぜひご相談ください。
+            </p>
+            <a href="services.html" class="cta-btn">Moldflow解析サービスを見る</a>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2025 樹脂流動解析技研</p>
+        </footer>
+    </div>
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <header>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken logo">
+                <h1>Scientific Molding: The 6-Step Approach for Robust Injection Molding</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="blog-container">
+            <div class="blog-date">2025-06-06</div>
+            <h2>What is Scientific Molding?</h2>
+            <p>
+                Scientific molding is a data-driven, step-by-step approach to injection molding that uses measurement, analysis, and validation to optimize every stage of the process. The 6-step study is a proven method for establishing robust, repeatable molding conditions and minimizing defects.
+            </p>
+            <h2>The 6 Steps of Scientific Molding</h2>
+            <ol>
+                <li>
+                    <strong>1. Optimize Fill Speed Profile</strong><br>
+                    Analyze resin flow and cavity filling to determine the ideal injection speed profile. Moldflow simulation helps predict fill balance and air trap risks before actual trials.
+                </li>
+                <li>
+                    <strong>2. Determine V/P (Velocity/Pressure) Transfer Point</strong><br>
+                    Optimize the switch from filling to packing to prevent short shots and flash. Use in-mold sensors or simulation to pinpoint the ideal transfer point.
+                </li>
+                <li>
+                    <strong>3. Optimize Packing Profile</strong><br>
+                    Adjust packing pressure and time to minimize sink marks and achieve dimensional accuracy. Moldflow’s packing analysis helps identify the best packing conditions.
+                </li>
+                <li>
+                    <strong>4. Set Cooling Time</strong><br>
+                    Ensure sufficient cooling and solidification to minimize warpage and residual stress. Cooling analysis predicts the optimal cooling time.
+                </li>
+                <li>
+                    <strong>5. Verify Cushion</strong><br>
+                    Check the screw position (cushion) to ensure stable packing and filling. Inadequate cushion can cause short shots or dimensional issues.
+                </li>
+                <li>
+                    <strong>6. Define and Validate the Molding Window</strong><br>
+                    Based on the above, establish the range of process conditions (molding window) that yield stable, high-quality parts. Moldflow’s window mapping visualizes this range and supports robust process development.
+                </li>
+            </ol>
+            <h2>Moldflow’s Role in Each Step</h2>
+            <ul>
+                <li>Simulate fill, pack, and cool stages to predict optimal settings before trials</li>
+                <li>Validate V/P transfer and cushion with data, not guesswork</li>
+                <li>Visualize the molding window for robust, repeatable production</li>
+            </ul>
+            <h2>Benefits of Scientific Molding</h2>
+            <ul>
+                <li>Lower defect rates and more consistent quality</li>
+                <li>Reduced trial-and-error and lower costs</li>
+                <li>Faster ramp-up for mass production</li>
+                <li>Improved standardization and repeatability on the shop floor</li>
+            </ul>
+            <h2>Kaiseki Giken’s Support</h2>
+            <p>
+                Our Autodesk Moldflow Expert Certified engineers support your entire 6-step scientific molding process. We provide clear, actionable reports and bilingual (Japanese/English) recommendations for robust, data-driven manufacturing.<br>
+                Ready to achieve stable, high-quality production? Contact us today.
+            </p>
+            <a href="services.html" class="cta-btn">See Our Moldflow Services</a>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <p style="text-align:center; margin-top:1em;">&copy; 2025 Kaiseki Giken</p>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -58,20 +58,22 @@ Add a new <li> entry in the blog list with a link, date, and summary.
         .lang-switch-btn:hover {
             background: #005580;
         }
-        .about-logo {
+        nav ul {
+            list-style: none;
+            padding: 0;
             display: flex;
-            align-items: center;
-            margin-bottom: 1em;
+            gap: 1.5em;
+            justify-content: center;
         }
-        .about-logo img {
-            max-width: 100px;
-            margin-right: 1em;
+        nav a {
+            text-decoration: none;
+            color: #0072b1;
+            font-weight: bold;
         }
-        .about-logo h1 {
-            font-size: 2em;
-            margin: 0;
-            color: #333;
+        nav a:hover {
+            text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
@@ -106,7 +108,21 @@ Add a new <li> entry in the blog list with a link, date, and summary.
                     <div class="blog-date">2024-05-20</div>
                     <div class="blog-summary">反りを最小限に抑え、品質を向上させるためのゲート位置選定のコツとベストプラクティス。</div>
                 </li>
-                <!-- ここに新しいブログ記事を追加 -->
+                <li>
+                    <a class="blog-title" href="blog-post-3.html">射出成形におけるプロセスパラメータの重要性</a>
+                    <div class="blog-date">2024-05-20</div>
+                    <div class="blog-summary">射出成形におけるプロセスパラメータの選定が、成形品の品質や生産性に与える影響について解説します。</div>
+                </li>
+                <li>
+                    <a class="blog-title" href="blog-post-4.html">サイエンティフィックモールディングとは？</a>
+                    <div class="blog-date">2024-05-20</div>
+                    <div class="blog-summary">射出成形におけるサイエンティフィックモールディングの概念と、その実践がもたらすメリットについて解説します。</div>
+                </li>
+                <li>
+                    <a class="blog-title" href="blog-post-5.html">射出成形における残留応力と反りの発生メカニズム</a>
+                    <div class="blog-date">2024-05-20</div>
+                    <div class="blog-summary">射出成形における残留応力の発生メカニズムと、それが反りを引き起こす原因について解説します。</div>
+                </li>
             </ul>
         </main>
         <footer>
@@ -149,7 +165,6 @@ Add a new <li> entry in the blog list with a link, date, and summary.
                     <div class="blog-date">2024-05-20</div>
                     <div class="blog-summary">Tips and best practices for selecting gate locations to minimize warpage and improve quality.</div>
                 </li>
-                <!-- Add more blog posts here -->
             </ul>
         </main>
         <footer>

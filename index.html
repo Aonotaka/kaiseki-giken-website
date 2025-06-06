@@ -19,7 +19,21 @@
     <style>
         .lang-section { display: none; }
         .lang-section.active { display: block; }
-        .lang-switch-btn { margin: 1em 0; padding: 0.5em 1em; }
+        .lang-switch-btn {
+            margin: 1em auto 0 auto;
+            display: block;
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            background: #0072b1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-switch-btn:hover {
+            background: #005580;
+        }
         .logo { display: flex; align-items: center; gap: 1em; }
         nav ul { list-style: none; padding: 0; display: flex; gap: 1em; }
         nav a { text-decoration: none; color: #0072b1; }
@@ -117,7 +131,7 @@
     <div id="ja" class="lang-section active">
         <header>
             <div class="about-logo">
-                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ">
                 <h1>樹脂流動解析技研</h1>
             </div>
             <nav>
@@ -190,12 +204,9 @@
     <!-- English Section -->
     <div id="en" class="lang-section">
         <header>
-            <div class="logo">
+            <div class="about-logo" style="justify-content: center;">
                 <img src="logo.png" alt="Kaiseki Giken logo" width="180" height="60">
-                <div>
-                    <h1>Kaiseki Giken</h1>
-                    <p>The solution to "Is it really okay to machine the mold as it is?"</p>
-                </div>
+                <h1 style="text-align:center; width:100%;">Kaiseki Giken</h1>
             </div>
             <nav>
                 <ul>

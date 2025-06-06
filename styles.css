@@ -8,7 +8,7 @@ body {
 header {
     background: #f8f8f8;
     color: #333;
-    padding: 20px 0;
+    padding: 1em 0;
     text-align: center;
 }
 
@@ -19,6 +19,11 @@ header.home-header {
 
 h1 {
     margin: 0;
+}
+
+header h1 {
+    text-align: center;
+    width: 100%;
 }
 
 h2 {
@@ -100,7 +105,8 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
+    justify-content: center;
     margin: 0;
 }
 nav li {
@@ -109,23 +115,30 @@ nav li {
 nav a {
     text-decoration: none;
     color: #0072b1;
+    font-weight: bold;
 }
 nav a:hover {
     text-decoration: underline;
 }
 .about-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1em;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
     margin-bottom: 1em;
 }
 .about-logo img {
     width: 180px;
     height: 60px;
     object-fit: contain;
+    display: block;
 }
 .about-logo h1 {
     font-size: 2em;
     margin: 0;
     color: #333;
+    text-align: center;
+    width: 100%;
 }
