@@ -145,12 +145,13 @@
         .sidebar-logo-row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start; /* Align X and logo to the left */
             padding: 0 1em 1em 1em;
-            flex-direction: row; /* X left, logo right */
+            gap: 0.5em; /* Space between X and logo */
+            flex-direction: row;
         }
         .sidebar-logo {
-            margin-left: 1em;
+            margin-left: 0;
         }
         .sidebar-close {
             background: none;
@@ -160,7 +161,7 @@
             cursor: pointer;
             padding: 0 0.2em;
             line-height: 1;
-            margin-right: 0.5em;
+            margin-right: 0;
             transition: color 0.2s;
         }
         .sidebar-close:hover {
@@ -315,7 +316,7 @@
         </div>
     </header>
 
-    <!-- SIDEBAR: X button at the left, logo at the right -->
+    <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-logo-row">
             <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
