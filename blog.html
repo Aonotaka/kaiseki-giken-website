@@ -58,6 +58,20 @@ Add a new <li> entry in the blog list with a link, date, and summary.
         .lang-switch-btn:hover {
             background: #005580;
         }
+        .about-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        .about-logo img {
+            max-width: 100px;
+            margin-right: 1em;
+        }
+        .about-logo h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +81,10 @@ Add a new <li> entry in the blog list with a link, date, and summary.
     <!-- Japanese Section -->
     <div id="ja" class="lang-section active">
         <header>
-            <h1>ブログ</h1>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ">
+                <h1>ブログ</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">ホーム</a></li>
@@ -107,7 +124,10 @@ Add a new <li> entry in the blog list with a link, date, and summary.
     <!-- English Section -->
     <div id="en" class="lang-section">
         <header>
-            <h1>Blog</h1>
+            <div class="about-logo">
+                <img src="logo.png" alt="Kaiseki Giken logo">
+                <h1>Blog</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
