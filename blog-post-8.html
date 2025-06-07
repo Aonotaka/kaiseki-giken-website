@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Types and Warpage Solvers in Moldflow: Accuracy, Linear & Nonlinear Calculations | Kaiseki Giken Blog</title>
+    <meta name="description" content="Learn about all mesh types in Moldflow (Midplane, Dual Domain, 3D Tetrahedral), their warpage solvers, and the differences between linear and nonlinear calculations for accurate injection molding simulation.">
+    <meta name="keywords" content="Moldflow, mesh types, midplane mesh, dual domain mesh, 3D mesh, tetrahedral mesh, warpage solver, linear calculation, nonlinear calculation, injection molding simulation, accuracy, plastic engineering, CAE, Autodesk Moldflow, warpage analysis, solver comparison, mesh accuracy, plastic part deformation, mold design, manufacturing">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-top-row">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        </a>
+                    </div>
+                </div>
+                <div class="lang-switch-group">
+                    <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
+                        <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" id="nav-home">ホーム</a></li>
+                        <li><a href="about.html" id="nav-about">会社概要</a></li>
+                        <li><a href="services.html" id="nav-services">サービス</a></li>
+                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
+            <a href="index.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>モールドフローのメッシュタイプと反りソルバーの違い<br>～精度・線形/非線形計算も解説～</h1>
+            <p>
+                モールドフロー（Moldflow）では、樹脂流動・反り解析のために複数のメッシュタイプが用意されています。各メッシュタイプごとに使用できる反りソルバーや計算手法（線形・非線形）が異なり、解析精度や計算時間に影響します。ここでは、代表的なメッシュタイプと各反りソルバーの特徴、精度の違いについて解説します。
+            </p>
+            <h2>主なメッシュタイプ</h2>
+            <ul>
+                <li><strong>ミッドプレーンメッシュ（Midplane Mesh）</strong><br>
+                    薄肉部品向けの2Dシェル要素。部品の中心面でメッシュ化し、計算が高速。複雑な形状や厚肉部品には不向き。</li>
+                <li><strong>デュアルドメインメッシュ（Dual Domain Mesh）</strong><br>
+                    2.5Dシェル要素。表裏両面からメッシュ化し、溶融樹脂の流動やウェルドライン、エアトラップの予測に優れる。最も一般的。</li>
+                <li><strong>3Dテトラメッシュ（3D Tetrahedral Mesh）</strong><br>
+                    3Dソリッド要素。厚肉部品や複雑形状に対応し、繊維配向や温度分布も高精度に再現可能。計算負荷は高いが、精度も最も高い。</li>
+            </ul>
+            <h2>各メッシュタイプで使える反りソルバー</h2>
+            <ul>
+                <li><strong>ミッドプレーン/デュアルドメイン</strong><br>
+                    - <b>線形ソルバー（Linear）</b>: 標準的な反り解析。計算が速く、設計初期に有効。<br>
+                    - <b>非線形ソルバー（Nonlinear）</b>: 大変形や拘束条件を考慮した高精度解析。組立時の変形予測やゲージ条件に有効。</li>
+                <li><strong>3Dテトラメッシュ</strong><br>
+                    - <b>線形ソルバー（Linear）</b>: 3Dメッシュでも利用可能。<br>
+                    - <b>非線形ソルバー（Nonlinear）</b>: 3Dメッシュで最も高精度な反り解析が可能。<br>
+                    ※3Dメッシュは繊維配向や温度分布も立体的に再現できるため、精度が高い。</li>
+            </ul>
+            <h2>線形計算と非線形計算の違い</h2>
+            <ul>
+                <li><b>線形計算（Linear Calculation）</b>:<br>
+                    小変形を仮定し、計算が高速。設計初期や比較的単純な部品に適する。</li>
+                <li><b>非線形計算（Nonlinear Calculation）</b>:<br>
+                    大変形や拘束条件、材料の非線形性を考慮。組立時の変形や複雑な応力状態を高精度に予測可能。</li>
+            </ul>
+            <h2>どのメッシュタイプがより高精度？</h2>
+            <p>
+                一般的に、<b>3Dテトラメッシュ＋非線形ソルバー</b>が最も高精度ですが、計算時間も長くなります。設計初期や薄肉部品はデュアルドメイン＋線形ソルバー、精密部品や組立精度が重要な場合は3Dメッシュ＋非線形ソルバーが推奨されます。
+            </p>
+            <h2>まとめ</h2>
+            <p>
+                モールドフローのメッシュタイプと反りソルバーの選択は、解析目的や部品形状により最適解が異なります。Kaiseki Gikenでは、最適なメッシュ・ソルバー選定と高精度な反り解析で、製品品質向上をサポートします。ご相談はお気軽にどうぞ。
+            </p>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>All Mesh Types in Moldflow: Warpage Solvers, Accuracy, and Linear vs Nonlinear Calculations</h1>
+            <p>
+                Moldflow offers several mesh types for injection molding simulation, each with unique strengths and solver options for warpage analysis. Understanding the differences between Midplane, Dual Domain, and 3D Tetrahedral meshes—and how linear and nonlinear calculations work—helps engineers choose the most accurate and efficient approach for their plastic part analysis.
+            </p>
+            <h2>Main Mesh Types in Moldflow</h2>
+            <ul>
+                <li><strong>Midplane Mesh</strong>:<br>
+                    2D shell elements placed at the part’s center. Best for thin-walled parts. Fastest to compute, but less accurate for thick or complex shapes.</li>
+                <li><strong>Dual Domain Mesh</strong>:<br>
+                    2.5D shell mesh using both surfaces. Most common mesh for general injection molding simulation. Good for predicting weld lines, air traps, and flow balance.</li>
+                <li><strong>3D Tetrahedral Mesh</strong>:<br>
+                    Full 3D solid mesh (tetrahedral elements). Required for thick, complex, or highly detailed parts. Highest accuracy for warpage, fiber orientation, and temperature distribution, but requires more computation time.</li>
+            </ul>
+            <h2>Warpage Solvers for Each Mesh Type</h2>
+            <ul>
+                <li><strong>Midplane & Dual Domain Meshes</strong>:
+                    <ul>
+                        <li><b>Linear Solver:</b> Standard warpage analysis, fast and suitable for early design or simple parts.</li>
+                        <li><b>Nonlinear Solver:</b> Accounts for large deformation and constraints, more accurate for assembly or gage conditions.</li>
+                    </ul>
+                </li>
+                <li><strong>3D Tetrahedral Mesh</strong>:
+                    <ul>
+                        <li><b>Linear Solver:</b> Available for 3D mesh, suitable for most cases.</li>
+                        <li><b>Nonlinear Solver:</b> Highest accuracy, especially for complex parts and real-world constraints.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Linear vs Nonlinear Calculations</h2>
+            <ul>
+                <li><b>Linear Calculation:</b> Assumes small deformations and linear material behavior. Fast and suitable for most early-stage or simple analyses.</li>
+                <li><b>Nonlinear Calculation:</b> Considers large deformations, nonlinear material properties, and complex boundary conditions. Essential for predicting assembly fit, gage conditions, and highly accurate warpage results.</li>
+            </ul>
+            <h2>Which Mesh Type is Most Accurate?</h2>
+            <p>
+                <b>3D Tetrahedral Mesh with Nonlinear Solver</b> provides the highest accuracy for warpage and deformation prediction, especially for thick, complex, or highly constrained parts. For thin, simple parts or early design, Dual Domain or Midplane with Linear Solver is often sufficient and much faster.
+            </p>
+            <h2>Summary</h2>
+            <p>
+                Choosing the right mesh type and solver in Moldflow depends on your part geometry, required accuracy, and simulation goals. For the best results, consult with Moldflow experts like Kaiseki Giken to select the optimal mesh and calculation method for your project.
+            </p>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            var label = document.getElementById('lang-label');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
+            }
+        }
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var body = document.body;
+            sidebar.classList.toggle('open');
+            body.classList.toggle('sidebar-open');
+        }
+    </script>
+</body>
+</html>

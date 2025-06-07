@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-by-Step Guide to Moldflow Analysis for Beginners | 初心者向けモールドフロー解析ガイド</title>
+    <meta name="description" content="A beginner-friendly, step-by-step guide to Moldflow analysis for injection molding. モールドフロー解析の基本手順を初心者向けに解説。">
+    <meta name="keywords" content="Moldflow, beginner guide, step-by-step, injection molding simulation, CAE, mesh generation, model preparation, simulation workflow, plastic engineering, mold design, Kaiseki Giken, モールドフロー, 初心者, 解析手順, 射出成形, シミュレーション">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">...</header>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-top-row">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        </a>
+                    </div>
+                </div>
+                <!-- Replace the two language buttons with a single toggle button -->
+                <div class="lang-switch-group">
+                    <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
+                        <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" id="nav-home">ホーム</a></li>
+                        <li><a href="about.html" id="nav-about">会社概要</a></li>
+                        <li><a href="services.html" id="nav-services">サービス</a></li>
+                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
+            <a href="index.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+        </ul>
+    </nav>
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>初心者向けモールドフロー解析ステップバイステップガイド</h1>
+            <p>
+                モールドフロー解析は、射出成形の品質向上や不良低減に欠かせないツールです。ここでは初心者の方でも分かりやすいよう、基本的な解析手順をステップごとに解説します。
+            </p>
+            <h2>1. CADモデルの準備</h2>
+            <ul>
+                <li>不要な細部やエラーを修正し、モデルをクリーンアップ</li>
+                <li>隙間や重複がないか確認し、完全なソリッドモデルにする</li>
+            </ul>
+            <h2>2. メッシュ生成</h2>
+            <ul>
+                <li>部品形状や厚みに応じて適切なメッシュタイプ（デュアルドメイン、3Dなど）を選択</li>
+                <li>重要部位は細かくメッシュを切ると精度が向上</li>
+            </ul>
+            <h2>3. 解析条件の設定</h2>
+            <ul>
+                <li>材料データベースから樹脂を選択</li>
+                <li>ゲート位置やランナー、冷却回路を設定</li>
+                <li>温度・圧力などのプロセス条件を入力</li>
+            </ul>
+            <h2>4. 解析の実行</h2>
+            <ul>
+                <li>充填・保圧・冷却・反り解析を順に実行</li>
+                <li>エラーや警告が出た場合は内容を確認</li>
+            </ul>
+            <h2>5. 結果の確認と解釈</h2>
+            <ul>
+                <li>流動フロント、圧力、温度、反りなどの結果を確認</li>
+                <li>不良が予測された場合は設計や条件を見直す</li>
+            </ul>
+            <h2>6. 最適化と再解析</h2>
+            <ul>
+                <li>設計や条件を調整し、再度解析を実施</li>
+                <li>最適な結果が得られるまで繰り返す</li>
+            </ul>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <div id="en" class="lang-section">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>Step-by-Step Guide to Moldflow Analysis for Beginners</h1>
+            <p>
+                Moldflow analysis is essential for optimizing injection molding processes and part quality. Here’s a simple step-by-step guide for beginners.
+            </p>
+            <h2>1. Prepare the CAD Model</h2>
+            <ul>
+                <li>Clean up geometry and remove unnecessary details</li>
+                <li>Check for gaps, overlaps, and ensure the model is watertight</li>
+            </ul>
+            <h2>2. Generate the Mesh</h2>
+            <ul>
+                <li>Select the appropriate mesh type (Dual Domain, 3D, etc.)</li>
+                <li>Refine mesh in critical areas for better accuracy</li>
+            </ul>
+            <h2>3. Set Up the Simulation</h2>
+            <ul>
+                <li>Choose the resin from the material database</li>
+                <li>Set gate locations, runner system, and cooling channels</li>
+                <li>Input process parameters (temperature, pressure, etc.)</li>
+            </ul>
+            <h2>4. Run the Analysis</h2>
+            <ul>
+                <li>Perform filling, packing, cooling, and warpage simulations</li>
+                <li>Check for errors or warnings in the solver log</li>
+            </ul>
+            <h2>5. Interpret the Results</h2>
+            <ul>
+                <li>Review flow fronts, pressure, temperature, and warpage plots</li>
+                <li>If defects are predicted, adjust design or process parameters</li>
+            </ul>
+            <h2>6. Optimize and Iterate</h2>
+            <ul>
+                <li>Repeat simulation with improved settings until optimal results are achieved</li>
+            </ul>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            var label = document.getElementById('lang-label');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
+            }
+        }
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var body = document.body;
+            sidebar.classList.toggle('open');
+            body.classList.toggle('sidebar-open');
+        }
+    </script>
+</body>
+</html>

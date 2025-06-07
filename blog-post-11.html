@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Mistakes in Moldflow Analysis and How to Avoid Them | モールドフロー解析でよくある失敗とその回避法</title>
+    <meta name="description" content="Avoid common mistakes in Moldflow analysis. モールドフロー解析で陥りやすいミスとその対策を紹介。">
+    <meta name="keywords" content="Moldflow, common mistakes, simulation errors, mesh quality, material selection, process setup, result interpretation, injection molding, CAE, troubleshooting, best practices, Kaiseki Giken, モールドフロー, 失敗例, メッシュ品質, 材料選定, プロセス設定, 結果解釈">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-top-row">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        </a>
+                    </div>
+                </div>
+                <!-- Replace the two language buttons with a single toggle button -->
+                <div class="lang-switch-group">
+                    <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
+                        <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" id="nav-home">ホーム</a></li>
+                        <li><a href="about.html" id="nav-about">会社概要</a></li>
+                        <li><a href="services.html" id="nav-services">サービス</a></li>
+                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
+            <a href="index.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+        </ul>
+    </nav>
+    <div id="ja" class="lang-section active">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>モールドフロー解析でよくある失敗とその回避法</h1>
+            <p>
+                モールドフロー解析は便利なツールですが、初心者が陥りやすい失敗も多くあります。ここでは代表的なミスとその回避方法を分かりやすく解説します。
+            </p>
+            <h2>1. メッシュ品質が悪い</h2>
+            <ul>
+                <li>粗すぎる・歪んだメッシュは精度低下の原因</li>
+                <li><b>対策：</b>重要部位は細かく、メッシュ診断でエラーを確認</li>
+            </ul>
+            <h2>2. 材料選定ミス</h2>
+            <ul>
+                <li>樹脂データが間違っていると予測精度が大きく低下</li>
+                <li><b>対策：</b>必ず最新の材料データベースから選択</li>
+            </ul>
+            <h2>3. プロセス条件の設定漏れ</h2>
+            <ul>
+                <li>温度や圧力などの入力ミスや未設定</li>
+                <li><b>対策：</b>全ての条件を再確認し、現場担当者とも相談</li>
+            </ul>
+            <h2>4. 結果の誤解釈</h2>
+            <ul>
+                <li>警告を無視したり、プロットの意味を誤解する</li>
+                <li><b>対策：</b>ログや警告を確認し、分からない場合は専門家に相談</li>
+            </ul>
+            <h2>5. 一度の解析で終わる</h2>
+            <ul>
+                <li>最適化せずに1回だけで終わると改善効果が薄い</li>
+                <li><b>対策：</b>設計や条件を変えて何度も解析・最適化を繰り返す</li>
+            </ul>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <div id="en" class="lang-section">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>Common Mistakes in Moldflow Analysis and How to Avoid Them</h1>
+            <p>
+                Moldflow analysis is powerful, but beginners often make mistakes that reduce accuracy. Here are the most common errors and how to avoid them.
+            </p>
+            <h2>1. Poor Mesh Quality</h2>
+            <ul>
+                <li>Coarse or distorted mesh reduces simulation accuracy</li>
+                <li><b>Solution:</b> Refine mesh in critical areas and check mesh diagnostics</li>
+            </ul>
+            <h2>2. Incorrect Material Selection</h2>
+            <ul>
+                <li>Wrong resin data leads to unreliable results</li>
+                <li><b>Solution:</b> Always use up-to-date material data from the Moldflow database</li>
+            </ul>
+            <h2>3. Incomplete Process Setup</h2>
+            <ul>
+                <li>Missing or unrealistic process parameters (temperature, pressure, etc.)</li>
+                <li><b>Solution:</b> Double-check all process settings and consult with manufacturing engineers</li>
+            </ul>
+            <h2>4. Misinterpreting Results</h2>
+            <ul>
+                <li>Ignoring warnings or misreading plots can lead to wrong conclusions</li>
+                <li><b>Solution:</b> Review solver logs, understand result plots, and ask experts if needed</li>
+            </ul>
+            <h2>5. Not Iterating the Design</h2>
+            <ul>
+                <li>Stopping after one simulation run misses optimization opportunities</li>
+                <li><b>Solution:</b> Use Moldflow iteratively to refine design and process for best results</li>
+            </ul>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            var label = document.getElementById('lang-label');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
+            }
+        }
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var body = document.body;
+            sidebar.classList.toggle('open');
+            body.classList.toggle('sidebar-open');
+        }
+    </script>
+</body>
+</html>
