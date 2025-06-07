@@ -121,7 +121,7 @@ html, body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    padding: 0.5em 0.8em;
+    padding: 0.5em 0.4em; /* Reduced from 0.5em 0.8em */
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
 }
@@ -137,9 +137,12 @@ html, body {
         font-size: 0.95em; /* Optionally, slightly reduce font size */
         padding: 0.5em 0;
     }
+    .header-nav a {
+        padding: 0.4em 0.2em;
+    }
     .header-nav-row {
-        padding-left: 0.2em;
-        padding-right: 0.2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 }
 
