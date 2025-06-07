@@ -78,6 +78,9 @@ html, body {
     padding: 0.2em 0.8em;
     border-radius: 4px;
     transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
 }
 .lang-switch-btn:hover,
 .lang-switch-btn.active {
@@ -211,6 +214,10 @@ html, body {
 .sidebar-toggle:hover {
     background: #005580;
 }
+
+/* Language Sections */
+.lang-section { display: none; }
+.lang-section.active { display: block; }
 
 /* Responsive */
 @media (max-width: 800px) {

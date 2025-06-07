@@ -59,9 +59,11 @@
                         </a>
                     </div>
                 </div>
+                <!-- Replace the two language buttons with a single toggle button -->
                 <div class="lang-switch-group">
-                    <a href="index.html" class="lang-switch-btn" id="lang-ja">日本語</a>
-                    <a href="index.html" class="lang-switch-btn" id="lang-en">English</a>
+                    <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
+                        <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
+                    </button>
                 </div>
             </div>
             <div class="header-nav-row">
@@ -215,12 +217,15 @@
         function switchLang() {
             var ja = document.getElementById('ja');
             var en = document.getElementById('en');
+            var label = document.getElementById('lang-label');
             if (ja.classList.contains('active')) {
                 ja.classList.remove('active');
                 en.classList.add('active');
+                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
             } else {
                 en.classList.remove('active');
                 ja.classList.add('active');
+                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
             }
         }
 
