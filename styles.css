@@ -131,6 +131,18 @@ html, body {
     color: #005580;
 }
 
+@media (max-width: 600px) {
+    .header-nav ul {
+        gap: 0.5em;      /* Reduce space between navigation links */
+        font-size: 0.95em; /* Optionally, slightly reduce font size */
+        padding: 0.5em 0;
+    }
+    .header-nav-row {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
 /* Sidebar */
 .sidebar {
     position: fixed;

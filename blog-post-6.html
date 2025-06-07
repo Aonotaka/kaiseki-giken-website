@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Windage? Understanding Windage in Moldflow Analysis | Kaiseki Giken Blog</title>
+    <meta name="description" content="Learn about windage in injection molding, its impact on plastic part quality, and how Moldflow simulation helps predict and optimize windage for better manufacturing results.">
+    <meta name="keywords" content="windage, moldflow, injection molding, simulation, plastic engineering, warpage, shrinkage, mold design, manufacturing, moldflow analysis, windage prediction, plastic part quality, Kaiseki Giken">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-top-row">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        </a>
+                    </div>
+                </div>
+                <div class="lang-switch-group">
+                    <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
+                        <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" id="nav-home">ホーム</a></li>
+                        <li><a href="about.html" id="nav-about">会社概要</a></li>
+                        <li><a href="services.html" id="nav-services">サービス</a></li>
+                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
+            <a href="index.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Japanese Section -->
+    <div id="ja" class="lang-section active">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>ウィンデージ（Windage）とは？モールドフロー解析での活用</h1>
+            <p>
+                ウィンデージ（windage）は、射出成形や樹脂流動解析（Moldflow）において重要なキーワードです。ウィンデージとは、成形品が金型から離型された後に発生する寸法変化や歪み（反り・収縮）を指します。特に精密部品や大型部品では、ウィンデージの予測と対策が製品品質や歩留まり向上に直結します。
+            </p>
+            <h2>ウィンデージの原因と影響</h2>
+            <ul>
+                <li>樹脂の冷却収縮による寸法変化</li>
+                <li>繊維配向や材料特性による反り・歪み</li>
+                <li>金型設計やゲート位置の影響</li>
+            </ul>
+            <p>
+                ウィンデージを正確に予測することで、金型修正や試作回数を減らし、コスト削減・納期短縮が可能です。
+            </p>
+            <h2>モールドフロー解析でのウィンデージ活用</h2>
+            <p>
+                Moldflowなどの樹脂流動解析ソフトウェアでは、ウィンデージ（windage）をシミュレーションし、成形品の最終寸法や反り・収縮を事前に予測できます。これにより、設計段階での最適化や金型補正量の算出が容易になります。
+            </p>
+            <ul>
+                <li>ウィンデージ予測による金型設計の最適化</li>
+                <li>反り・収縮の可視化と対策提案</li>
+                <li>射出成形プロセスの最適化</li>
+            </ul>
+            <h2>まとめ</h2>
+            <p>
+                ウィンデージは射出成形・モールドフロー解析において不可欠な要素です。Kaiseki Gikenでは、豊富な経験と最新のMoldflow技術を活用し、ウィンデージ対策・最適化をサポートします。ウィンデージや樹脂流動解析、射出成形のご相談はお気軽にお問い合わせください。
+            </p>
+            <a href="blog.html">&larr; ブログ一覧に戻る</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- English Section -->
+    <div id="en" class="lang-section">
+        <main>
+            <div class="blog-date">2024-06-07</div>
+            <h1>What is Windage? Application of Windage in Moldflow Analysis</h1>
+            <p>
+                <strong>Windage</strong> is a key concept in injection molding and Moldflow simulation. In the context of plastic engineering, windage refers to the dimensional changes, warpage, or shrinkage that occur in a molded part after it is ejected from the mold. Understanding and predicting windage is essential for achieving high-quality plastic parts and optimizing the injection molding process.
+            </p>
+            <h2>Causes and Effects of Windage</h2>
+            <ul>
+                <li>Dimensional changes due to cooling shrinkage of plastic</li>
+                <li>Warpage and deformation caused by fiber orientation and material properties</li>
+                <li>Influence of mold design and gate location</li>
+            </ul>
+            <p>
+                By accurately predicting windage, manufacturers can reduce costly mold modifications, minimize trial-and-error, and improve production yield and part quality.
+            </p>
+            <h2>How Moldflow Simulation Predicts Windage</h2>
+            <p>
+                Moldflow analysis software enables engineers to simulate windage, warpage, and shrinkage before manufacturing the mold. Using Moldflow, you can visualize and quantify windage, optimize mold design, and determine necessary mold compensation for dimensional accuracy.
+            </p>
+            <ul>
+                <li>Windage prediction for mold design optimization</li>
+                <li>Visualization and countermeasures for warpage and shrinkage</li>
+                <li>Process optimization for injection molding</li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>
+                Windage is a critical factor in injection molding and Moldflow analysis. At Kaiseki Giken, our experienced engineers use advanced Moldflow simulation to help you predict and optimize windage, ensuring your plastic parts meet dimensional and quality requirements. For expert support in windage, Moldflow analysis, and injection molding, contact us today.
+            </p>
+            <a href="blog.html">&larr; Back to Blog</a>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-contact">
+                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function switchLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            var label = document.getElementById('lang-label');
+            if (ja.classList.contains('active')) {
+                ja.classList.remove('active');
+                en.classList.add('active');
+                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
+            } else {
+                en.classList.remove('active');
+                ja.classList.add('active');
+                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
+            }
+        }
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            var body = document.body;
+            sidebar.classList.toggle('open');
+            body.classList.toggle('sidebar-open');
+        }
+    </script>
+</body>
+</html>
