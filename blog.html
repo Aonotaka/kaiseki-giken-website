@@ -24,7 +24,6 @@ Add a new <li> entry in the blog list with a link, date, and summary.
                         </a>
                     </div>
                 </div>
-                <!-- Replace the two language buttons with a single toggle button -->
                 <div class="lang-switch-group">
                     <button type="button" class="lang-switch-btn" id="lang-switch" onclick="switchLang()">
                         <span id="lang-label">日本語&nbsp;↔&nbsp;English</span>
@@ -61,165 +60,117 @@ Add a new <li> entry in the blog list with a link, date, and summary.
     </nav>
 
     <div id="ja" class="lang-section active">
-        <main>
-            <ul class="blog-list">
-                <li>
-                    <a class="blog-title" href="blog-post-1.html">モールドフロー解析とは？射出成形へのメリット</a>
-                    <div class="blog-date">2024-06-05</div>
-                    <div class="blog-summary">モールドフロー解析の概要と、成形不良の低減や設計最適化にどう役立つかを解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-2.html">ゲート位置最適化のポイントと成形品質向上</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">反りを最小限に抑え、品質を向上させるためのゲート位置選定のコツとベストプラクティス。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-3.html">射出成形におけるプロセスパラメータの重要性</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">射出成形におけるプロセスパラメータの選定が、成形品の品質や生産性に与える影響について解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-4.html">サイエンティフィックモールディングとは？</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">射出成形におけるサイエンティフィックモールディングの概念と、その実践がもたらすメリットについて解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-5.html">射出成形における残留応力と反りの発生メカニズム</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">射出成形における残留応力の発生メカニズムと、それが反りを引き起こす原因について解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-6.html">ウィンデージ（Windage）とは？モールドフロー解析での活用</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">ウィンデージの定義とその影響、モールドフロー解析を用いた対策について詳しく解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-7.html">ノード拘束（Nodal Constraints）によるモールドフロー反り解析と組立・ゲージ条件の予測</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">ノード拘束を用いたモールドフロー解析の手法と、組立・ゲージ条件の予測について詳しく解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-8.html">モールドフローのメッシュタイプと反りソルバーの違い</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">モールドフロー解析におけるメッシュタイプの選定と、反りソルバーの違いについて詳しく解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-9.html">モールドフロー解析で射出成形不良を減らす方法</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">モールドフロー解析を活用して反り・ヒケ・ウェルドライン・ショートショットなどの成形不良を予測・低減する方法を解説します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-10.html">初心者向けモールドフロー解析ステップバイステップガイド</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">モールドフロー解析の基本手順を初心者向けに分かりやすく解説。モデル準備からメッシュ生成、解析、結果の見方まで。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-11.html">モールドフロー解析でよくある失敗とその回避法</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">メッシュ品質・材料選定・プロセス設定・結果解釈など、モールドフロー解析で陥りやすいミスとその対策を紹介します。</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-12.html">モールドフロー成功事例：自動車・医療・電子部品分野</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">自動車・医療・電子部品業界でのモールドフロー解析による品質向上・コスト削減の実例を紹介します。</div>
-                </li>
-            </ul>
-        </main>
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-contact">
-                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="about.html">会社概要</a></li>
-                        <li><a href="services.html">サービス</a></li>
-                        <li><a href="blog.html">ブログ</a></li>
-                    </ul>
-                </nav>
+        <div class="blog-layout">
+            <!-- Category List (Left) -->
+            <aside class="blog-categories">
+                <h3>カテゴリー</h3>
+                <ul>
+                    <li><a href="#" class="category-link active">すべて</a></li>
+                    <li><a href="#" class="category-link">モールドフロー</a></li>
+                    <li><a href="#" class="category-link">ゲート設計</a></li>
+                    <li><a href="#" class="category-link">プロセス</a></li>
+                    <li><a href="#" class="category-link">品質</a></li>
+                    <li><a href="#" class="category-link">事例</a></li>
+                </ul>
+            </aside>
+            <!-- Blog Main Content (Center) -->
+            <main class="blog-container">
+                <h1 style="font-size:2em; color:#22308d; margin-bottom:1.2em; text-align:center;">ブログ</h1>
+                <ul class="blog-list">
+                    <li data-category="モールドフロー,品質">
+                        <a class="blog-title" href="blog-post-1.html">モールドフロー解析とは？射出成形へのメリット</a>
+                        <div class="blog-date">2024-06-05</div>
+                        <div class="blog-summary">モールドフロー解析の概要と、成形不良の低減や設計最適化にどう役立つかを解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー, 品質</span></div>
+                    </li>
+                    <li data-category="ゲート設計,品質">
+                        <a class="blog-title" href="blog-post-2.html">ゲート位置最適化のポイントと成形品質向上</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">反りを最小限に抑え、品質を向上させるためのゲート位置選定のコツとベストプラクティス。</div>
+                        <div class="blog-cats">カテゴリー: <span>ゲート設計, 品質</span></div>
+                    </li>
+                    <li data-category="プロセス,品質">
+                        <a class="blog-title" href="blog-post-3.html">射出成形におけるプロセスパラメータの重要性</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">射出成形におけるプロセスパラメータの選定が、成形品の品質や生産性に与える影響について解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>プロセス, 品質</span></div>
+                    </li>
+                    <li data-category="プロセス">
+                        <a class="blog-title" href="blog-post-4.html">サイエンティフィックモールディングとは？</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">射出成形におけるサイエンティフィックモールディングの概念と、その実践がもたらすメリットについて解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>プロセス</span></div>
+                    </li>
+                    <li data-category="品質">
+                        <a class="blog-title" href="blog-post-5.html">射出成形における残留応力と反りの発生メカニズム</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">射出成形における残留応力の発生メカニズムと、それが反りを引き起こす原因について解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>品質</span></div>
+                    </li>
+                    <li data-category="モールドフロー">
+                        <a class="blog-title" href="blog-post-6.html">ウィンデージ（Windage）とは？モールドフロー解析での活用</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">ウィンデージの定義とその影響、モールドフロー解析を用いた対策について詳しく解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー</span></div>
+                    </li>
+                    <li data-category="モールドフロー,プロセス">
+                        <a class="blog-title" href="blog-post-7.html">ノード拘束（Nodal Constraints）によるモールドフロー反り解析と組立・ゲージ条件の予測</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">ノード拘束を用いたモールドフロー解析の手法と、組立・ゲージ条件の予測について詳しく解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー, プロセス</span></div>
+                    </li>
+                    <li data-category="モールドフロー">
+                        <a class="blog-title" href="blog-post-8.html">モールドフローのメッシュタイプと反りソルバーの違い</a>
+                        <div class="blog-date">2024-05-20</div>
+                        <div class="blog-summary">モールドフロー解析におけるメッシュタイプの選定と、反りソルバーの違いについて詳しく解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー</span></div>
+                    </li>
+                    <li data-category="モールドフロー,品質">
+                        <a class="blog-title" href="blog-post-9.html">モールドフロー解析で射出成形不良を減らす方法</a>
+                        <div class="blog-date">2024-06-07</div>
+                        <div class="blog-summary">モールドフロー解析を活用して反り・ヒケ・ウェルドライン・ショートショットなどの成形不良を予測・低減する方法を解説します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー, 品質</span></div>
+                    </li>
+                    <li data-category="モールドフロー,プロセス">
+                        <a class="blog-title" href="blog-post-10.html">初心者向けモールドフロー解析ステップバイステップガイド</a>
+                        <div class="blog-date">2024-06-07</div>
+                        <div class="blog-summary">モールドフロー解析の基本手順を初心者向けに分かりやすく解説。モデル準備からメッシュ生成、解析、結果の見方まで。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー, プロセス</span></div>
+                    </li>
+                    <li data-category="モールドフロー,品質">
+                        <a class="blog-title" href="blog-post-11.html">モールドフロー解析でよくある失敗とその回避法</a>
+                        <div class="blog-date">2024-06-07</div>
+                        <div class="blog-summary">メッシュ品質・材料選定・プロセス設定・結果解釈など、モールドフロー解析で陥りやすいミスとその対策を紹介します。</div>
+                        <div class="blog-cats">カテゴリー: <span>モールドフロー, 品質</span></div>
+                    </li>
+                    <li data-category="事例">
+                        <a class="blog-title" href="blog-post-12.html">モールドフロー成功事例：自動車・医療・電子部品分野</a>
+                        <div class="blog-date">2024-06-07</div>
+                        <div class="blog-summary">自動車・医療・電子部品業界でのモールドフロー解析による品質向上・コスト削減の実例を紹介します。</div>
+                        <div class="blog-cats">カテゴリー: <span>事例</span></div>
+                    </li>
+                </ul>
+            </main>
+            <!-- Author Section (Right) -->
+            <aside class="blog-author">
+    <div class="author-box">
+        <img src="giken-kaiseki.png" alt="ギケンちゃんとカイセキくん" class="author-photo-twin">
+        <div class="author-names">ギケンちゃん・カイセキくん</div>
+        <div class="author-profile">
+            <div class="author-profile-block">
+                <strong>名前：</strong>ギケンちゃん<br>
+                <strong>趣味：</strong>ものづくりの裏側を知ること（…最近ハマってます）<br>
+                「かいせき君に教えてもらいながら、ちょっとずつ成長中！“樹脂流動って何？”っていうあなたと同じ目線で、いろんなことを学んでいきます！」
             </div>
-        </footer>
+            <div class="author-profile-block">
+                <strong>名前：</strong>カイセキ君<br>
+                <strong>特徴：</strong>冷静で理論派。でも教えるときは超やさしい。<br>
+                「難しそうな“解析”も、ちゃんと噛み砕けばシンプルになります。ぎけんちゃんの疑問を通じて、あなたにも“なるほど！”を届けます。」
+            </div>
+        </div>
     </div>
-    <!-- English Section -->
-    <div id="en" class="lang-section">
-        <main class="blog-container">
-            <ul class="blog-list">
-                <li>
-                    <a class="blog-title" href="blog-post-1.html">What is Moldflow Analysis? Benefits for Injection Molding</a>
-                    <div class="blog-date">2024-06-05</div>
-                    <div class="blog-summary">An introduction to Moldflow analysis and how it helps manufacturers reduce defects and optimize part design.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-2.html">How to Optimize Gate Location for Better Molding Results</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">Tips and best practices for selecting gate locations to minimize warpage and improve quality.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-3.html">Importance of Process Parameters in Injection Molding</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">An overview of how the selection of process parameters in injection molding affects product quality and productivity.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-4.html">What is Scientific Molding?</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">An explanation of the concept of scientific molding in injection molding and the benefits it brings.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-5.html">Residual Stress and Warpage Mechanisms in Injection Molding</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">An overview of the mechanisms behind residual stress in injection molding and how it leads to warpage.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-6.html">What is Windage? Understanding Windage in Moldflow Analysis</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">Learn about windage in injection molding, its impact on plastic part quality, and how Moldflow simulation helps predict and optimize windage for better manufacturing results.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-7.html">Nodal Constraints in Moldflow Analysis: Predicting Warpage and Assembly Conditions</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">Learn about nodal constraints in Moldflow analysis and how they can be used to predict warpage and assembly conditions.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-8.html">All Mesh Types in Moldflow: Warpage Solvers, Accuracy, and Linear vs Nonlinear Calculations</a>
-                    <div class="blog-date">2024-05-20</div>
-                    <div class="blog-summary">Learn about all mesh types in Moldflow, their impact on warpage solvers, and the differences between linear and nonlinear calculations.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-9.html">How Moldflow Simulation Reduces Injection Molding Defects</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">Learn how Moldflow simulation helps reduce injection molding defects such as warpage, sink marks, weld lines, and short shots, improving part quality and efficiency.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-10.html">Step-by-Step Guide to Moldflow Analysis for Beginners</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">A beginner-friendly guide to Moldflow analysis, covering model preparation, mesh generation, simulation setup, and result interpretation.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-11.html">Common Mistakes in Moldflow Analysis and How to Avoid Them</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">Discover the most common mistakes in Moldflow analysis and learn best practices to ensure accurate and reliable simulation results.</div>
-                </li>
-                <li>
-                    <a class="blog-title" href="blog-post-12.html">Moldflow Success Stories: Automotive, Medical, and Electronics</a>
-                    <div class="blog-date">2024-06-07</div>
-                    <div class="blog-summary">Real-world case studies of Moldflow simulation success in automotive, medical, and electronics industries, showing quality improvement and cost savings.</div>
-                </li>
-            </ul>
-        </main>
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-contact">
-                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
+</aside>
+        </div>
     </div>
     <script>
         function switchLang() {
@@ -236,13 +187,32 @@ Add a new <li> entry in the blog list with a link, date, and summary.
                 label.innerHTML = '日本語&nbsp;↔&nbsp;English';
             }
         }
-
         function toggleSidebar() {
             var sidebar = document.getElementById('sidebar');
             var body = document.body;
             sidebar.classList.toggle('open');
             body.classList.toggle('sidebar-open');
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            const cats = document.querySelectorAll('.category-link');
+            const posts = document.querySelectorAll('.blog-list li');
+            cats.forEach(cat => {
+                cat.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    cats.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    const catName = this.textContent.trim();
+                    posts.forEach(post => {
+                        if (catName === 'すべて') {
+                            post.style.display = '';
+                        } else {
+                            const categories = post.dataset.category.split(',').map(s => s.trim());
+                            post.style.display = categories.includes(catName) ? '' : 'none';
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>

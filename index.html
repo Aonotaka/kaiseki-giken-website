@@ -78,7 +78,6 @@
             </div>
         </div>
     </header>
-
     <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-logo-row">
@@ -95,133 +94,106 @@
         </ul>
     </nav>
 
-    <!-- Japanese Section -->
-    <div id="ja" class="lang-section active">
-        <main>
-            <section id="about">
-                <h2>射出成型シミュレーションでコスト削減・品質向上</h2>
-                <p>樹脂流動解析（Moldflow）とは、金型設計の最適化や成形品の品質向上を支援する技術です。</p>
-            </section>
-            <section id="cases">
-                <h2>解決できる課題</h2>
-                <div class="case">
-                    <h3>ケース１：成型後の反りを減らしたい</h3>
-                    <p>材料データやゲート位置を解析し、繊維の向きによる収縮率の違いを最小限に抑えます。</p>
+    <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-logo-row">
+            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
+            <a href="index.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="services.html">サービス</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="main-bg-section">
+            <div class="main-title">
+                射出成型シミュレーションで<br>
+                コスト削減・品質向上
+            </div>
+            <div class="desc">
+                樹脂流動解析（Moldflow）とは、金型設計の最適化や成形品の品質向上を支援する技術です。
+            </div>
+        </div>
+        <div class="section-title">
+            解析が、信頼をつくる
+        </div>
+        <div class="catchphrase">
+            勘に頼らず、根拠で動く開発へ。
+        </div>
+        <div class="section-title" style="margin-top:2em;">
+            流動解析で解決できる課題
+        </div>
+        <div class="case-flex">
+            <div class="case-info">
+                <div class="case-title">
+                    ケース１：成型後の反りを減らしたい
                 </div>
-                <div class="case">
-                    <h3>ケース２：低トン数の射出成型機で量産したい</h3>
-                    <p>必要トン数を計算し、プロセスパラメータ調整を提案。開発初期段階で生産可能性を検証できます。</p>
+                <div class="case-desc">
+                    材料データやゲート位置を解析し、繊維の向きによる収縮率の違いを最小限に抑えます。
                 </div>
-            </section>
-            <section id="expert">
-                <h2>解析技研の強み</h2>
-                <ul>
-                    <li>ホンダ・GMなどの自動車メーカーとの実績</li>
-                    <li>Autodesk Expert Certified 技術者</li>
-                    <li>日本語・英語バイリンガル</li>
-                    <li>北米のティア１サプライヤーでの実務経験</li>
-                </ul>
-            </section>
-        </main>
-        <!-- Japanese Contact Section -->
-        <section id="contact-section-ja" class="contact-form-section">
-            <h2>お問い合わせ / Contact Us</h2>
-            <form action="mailto:info@kaiseki-giken.com" method="POST" enctype="text/plain">
-                <label for="ja-name">お名前 / Name:</label>
-                <input id="ja-name" type="text" name="name" required>
-
-                <label for="ja-email">メールアドレス / Email:</label>
-                <input id="ja-email" type="email" name="email" required>
-
-                <label for="ja-company">会社名 / Company:</label>
-                <input id="ja-company" type="text" name="company">
-
-                <label for="ja-message">プロジェクト概要 / Project Details:</label>
-                <textarea id="ja-message" name="message" rows="5" required></textarea>
-
-                <button type="submit">送信 / Send</button>
-            </form>
-            <p class="contact-email">またはメール: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
-        </section>
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-contact">
-                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
+                <div class="case-title">
+                    ケース２：低トン数の射出成型機で量産したい
                 </div>
+                <div class="case-desc">
+                    必要トン数を計算し、プロセスパラメータ調整を提案。<br>
+                    論理的根拠で生産可能性を検証できます。
+                </div>
+            </div>
+            <div class="case-image">
+                <img src="case-1.png" alt="ケース1イメージ" style="max-width:400px; width:100%; height:auto;">
+            </div>
+        </div>
+        <div class="section-title" style="margin-top:2em;">
+            解析技研の強み
+        </div>
+        <ul style="margin-bottom:2em;">
+            <li>ホンダ・GMなどの自動車メーカーとの実績</li>
+            <li>Autodesk Expert Certified 技術者</li>
+            <li>日本語・英語バイリンガル</li>
+            <li>北米のティア１サプライヤーでの実務経験</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- First row: Logo and Inquiry button horizontally aligned and centered -->
+            <div class="footer-row-horizontal">
+                <div class="logo">
+                    <img src="logo.png" alt="樹脂流動解析技研">
+                </div>
+                <div class="inquiry">
+                    <button>お問い合わせ</button>
+                </div>
+            </div>
+            <!-- Second row: Navigation and Social, centered and same gap as first row -->
+            <div class="footer-row-horizontal">
                 <nav class="footer-nav">
-                    <ul>
+                    <ul style="text-align: center;">
+                        <li><a href="index.html">ホーム</a></li>
                         <li><a href="about.html">会社概要</a></li>
                         <li><a href="services.html">サービス</a></li>
                         <li><a href="blog.html">ブログ</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
                 </nav>
+                <div class="social-media" style="text-align: center;">
+                    <h3>ソーシャル</h3>
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>LinkedIn</p>
+                </div>
             </div>
-        </footer>
-    </div>
-
-    <!-- English Section -->
-    <div id="en" class="lang-section">
-        <main>
-            <section id="about-en">
-                <h2>Reduce Costs and Improve Quality with Injection Molding Simulation</h2>
-                <p>Moldflow analysis supports the optimization of mold design and improvement of product quality.</p>
-            </section>
-            <section id="cases-en">
-                <h2>Problems We Can Solve</h2>
-                <div class="case">
-                    <h3>Case 1: Want to reduce warpage after molding</h3>
-                    <p>We analyze material data and gate positions to minimize differences in shrinkage rates caused by fiber orientation.</p>
-                </div>
-                <div class="case">
-                    <h3>Case 2: Want to mass-produce with a low-tonnage injection molding machine</h3>
-                    <p>We calculate the required tonnage and propose process parameter adjustments, verifying manufacturability at the early development stage.</p>
-                </div>
-            </section>
-            <section id="expert-en">
-                <h2>Our Strengths</h2>
-                <ul>
-                    <li>Experience with automakers such as Honda and GM</li>
-                    <li>Autodesk Expert Certified Engineer</li>
-                    <li>Bilingual in Japanese and English</li>
-                    <li>Practical experience at Tier 1 suppliers in North America</li>
-                </ul>
-            </section>
-        </main>
-        <!-- English Contact Section -->
-        <section id="contact-section-en" class="contact-form-section">
-            <h2>Contact Us</h2>
-            <form action="mailto:info@kaiseki-giken.com" method="POST" enctype="text/plain">
-                <label for="en-name">Name:</label>
-                <input id="en-name" type="text" name="name" required>
-
-                <label for="en-email">Email:</label>
-                <input id="en-email" type="email" name="email" required>
-
-                <label for="en-company">Company:</label>
-                <input id="en-company" type="text" name="company">
-
-                <label for="en-message">Project Details:</label>
-                <textarea id="en-message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-            <p class="contact-email">Or email: <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a></p>
-        </section>
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-contact">
-                    <a href="mailto:info@kaiseki-giken.com">info@kaiseki-giken.com</a>
-                </div>
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="footer-bottom">
+            <p>プライバシーポリシー　Cookie（クッキー）ポリシー</p>
+            <p>© 2025 樹脂流動解析技研</p>
+        </div>
+    </footer>
 
     <script>
         function switchLang() {
