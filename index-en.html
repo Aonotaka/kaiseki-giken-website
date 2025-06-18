@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kaiseki-giken.com/">
     <meta property="og:site_name" content="Kaiseki Giken">
-    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale" content="en_US">
     <link rel="canonical" href="https://kaiseki-giken.com/">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png" type="image/png">
@@ -54,25 +54,24 @@
                 <div class="header-left">
                     <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Open sidebar">&#9776;</button>
                     <div class="header-logo">
-                        <a href="index.html">
-                            <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+                        <a href="index-en.html">
+                            <img src="logo.png" alt="Kaiseki Giken Logo" width="180" height="60">
                         </a>
                     </div>
                 </div>
-                <!-- Replace the two language buttons with a single toggle button -->
                 <div class="lang-switch-group">
-                    <button type="button" class="lang-switch-btn" onclick="location.href='index-en.html'">
-                        <span id="lang-label">English</span>
+                    <button type="button" class="lang-switch-btn" onclick="location.href='index.html'">
+                        <span id="lang-label">日本語</span>
                     </button>
                 </div>
             </div>
             <div class="header-nav-row">
                 <nav class="header-nav">
                     <ul>
-                        <li><a href="index.html" id="nav-home">ホーム</a></li>
-                        <li><a href="about.html" id="nav-about">会社概要</a></li>
-                        <li><a href="services.html" id="nav-services">サービス</a></li>
-                        <li><a href="blog.html" id="nav-blog">ブログ</a></li>
+                        <li><a href="index-en.html" id="nav-home">Home</a></li>
+                        <li><a href="about-en.html" id="nav-about">About</a></li>
+                        <li><a href="services-en.html" id="nav-services">Services</a></li>
+                        <li><a href="blog-en.html" id="nav-blog">Blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -82,115 +81,99 @@
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-logo-row">
             <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
-            <a href="index.html" class="sidebar-logo">
-                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
+            <a href="index-en.html" class="sidebar-logo">
+                <img src="logo.png" alt="Kaiseki Giken Logo" width="180" height="60">
             </a>
         </div>
         <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">会社概要</a></li>
-            <li><a href="services.html">サービス</a></li>
-            <li><a href="blog.html">ブログ</a></li>
-        </ul>
-    </nav>
-
-    <!-- SIDEBAR: Logo next to the X button (logo right after X, both left-aligned) -->
-    <nav id="sidebar" class="sidebar">
-        <div class="sidebar-logo-row">
-            <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Close sidebar">&times;</button>
-            <a href="index.html" class="sidebar-logo">
-                <img src="logo.png" alt="Kaiseki Giken ロゴ" width="180" height="60">
-            </a>
-        </div>
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">会社概要</a></li>
-            <li><a href="services.html">サービス</a></li>
-            <li><a href="blog.html">ブログ</a></li>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="about-en.html">About</a></li>
+            <li><a href="services-en.html">Services</a></li>
+            <li><a href="blog-en.html">Blog</a></li>
         </ul>
     </nav>
     <div class="main-container">
         <div class="main-bg-section">
             <div class="main-title">
-                射出成型シミュレーションで<br>
-                コスト削減・品質向上
+                Cost Reduction & Quality Improvement<br>
+                with Injection Molding Simulation
             </div>
             <div class="desc">
-                「このまま金型削って大丈夫かな？」を解決する
+                Solve your worries about “Is it really okay to cut the mold as is?”
             </div>
         </div>
 
         <div class="section-title">
-            解析が、信頼をつくる
+            Analysis Builds Trust
         </div>
         <div class="catchphrase">
-            勘に頼らず、根拠で動く開発へ。
+            Move forward with evidence, not just intuition.
         </div>
         <div class="case-info">
-            樹脂流動解析とは、金型設計の最適化や成形品の品質向上を支援する技術です。<br>
-            モールドフロー（Moldflow）に材料やプロセス情報を組み込むことで、成形品の反りや収縮、ゲート位置の最適化を行います。
+            Resin flow analysis is a technology that supports optimal mold design and improved product quality.<br>
+            By incorporating material and process information into Moldflow, we optimize warpage, shrinkage, and gate location.
         </div>
         <div style="text-align:center; margin: 2em 0;">
-            <img src="MoldflowOverview.png" alt="モールドフロー概要" style="max-width:100%; height:auto;">
+            <img src="MoldflowOverview.png" alt="Moldflow Overview" style="max-width:100%; height:auto;">
         </div>
         <div class="section-title" style="margin-top:2em;">
-            正確な解析結果のために
+            For Accurate Analysis Results
         </div>
         <div class="case-flex">
             <div class="case-info">
                 <div class="case-title">
-                    経験のある解析者
+                    Experienced Analysts
                 </div>
                 <div class="case-desc">
-                    樹脂流動解析は、正確な情報のインプットと解析のセットアップが解析結果を大きく左右します。<br>
-                    この世の中には、経験の足りない解析者が流動解析を行い、不正確な結果を出しているケースが多くあります。<br>
-                    １つのミスが、大きなコストを生むことになる流動解析です。解析技研ではオートデスク者の認定技術者が、正確な解析を行います。
+                    The accuracy of resin flow analysis greatly depends on correct input and setup.<br>
+                    There are many cases where inexperienced analysts produce inaccurate results.<br>
+                    A single mistake in flow analysis can lead to significant costs. At Kaiseki Giken, Autodesk-certified experts provide precise analysis.
                 </div>
                 <div class="case-title">
-                    樹脂素材のデータの質
+                    Quality of Resin Material Data
                 </div>
                 <div class="case-desc">
-                    樹脂素材のデータの質は、解析結果に大きな影響を与えます。<br>
-                    材料メーカーが提供するデータを使用することはもちろん、<br>
-                    解析技研では、必要に応じて材料メーカーと連携し、最新のデータを取得します。<br>
-                    また、樹脂の特性を正確に反映するため、材料データのカスタマイズも行います。
+                    The quality of resin material data has a major impact on analysis results.<br>
+                    We use data provided by material manufacturers,<br>
+                    and when necessary, collaborate with them to obtain the latest data.<br>
+                    We also customize material data to accurately reflect resin properties.
                 </div>
             </div>
             <div class="case-image">
-                <img src="case-1.png" alt="ケース1イメージ" style="max-width:400px; width:100%; height:auto;">
+                <img src="case-1.png" alt="Case 1 Image" style="max-width:400px; width:100%; height:auto;">
             </div>
         </div>
         <div class="section-title" style="margin-top:2em;">
-            流動解析で解決できる課題
+            Issues Solved by Flow Analysis
         </div>
         <div class="case-flex">
             <div class="case-info">
                 <div class="case-title">
-                    ケース１：成型後の反りを減らしたい
+                    Case 1: Reduce Warpage After Molding
                 </div>
                 <div class="case-desc">
-                    材料データやゲート位置を解析し、繊維の向きによる収縮率の違いを最小限に抑えます。
+                    Analyze material data and gate location to minimize shrinkage differences caused by fiber orientation.
                 </div>
                 <div class="case-title">
-                    ケース２：低トン数の射出成型機で量産したい
+                    Case 2: Mass Production with Low-Tonnage Injection Machines
                 </div>
                 <div class="case-desc">
-                    必要トン数を計算し、プロセスパラメータ調整を提案。<br>
-                    論理的根拠で生産可能性を検証できます。
+                    Calculate required tonnage and propose process parameter adjustments.<br>
+                    Verify manufacturability with logical evidence.
                 </div>
             </div>
             <div class="case-image">
-                <img src="case-1.png" alt="ケース1イメージ" style="max-width:400px; width:100%; height:auto;">
+                <img src="case-1.png" alt="Case 1 Image" style="max-width:400px; width:100%; height:auto;">
             </div>
         </div>
         <div class="section-title" style="margin-top:2em;">
-            解析技研の強み
+            Kaiseki Giken's Strengths
         </div>
         <ul style="margin-bottom:2em;">
-            <li>ホンダ・GMなどの自動車メーカーとの実績</li>
-            <li>Autodesk Expert Certified 技術者</li>
-            <li>日本語・英語バイリンガル</li>
-            <li>北米のティア１サプライヤーでの実務経験</li>
+            <li>Experience with automakers such as Honda and GM</li>
+            <li>Autodesk Expert Certified engineers</li>
+            <li>Bilingual in Japanese and English</li>
+            <li>Practical experience at Tier 1 suppliers in North America</li>
         </ul>
     </div>
 
@@ -199,25 +182,25 @@
             <!-- First row: Logo and Inquiry button horizontally aligned and centered -->
             <div class="footer-row-horizontal">
                 <div class="logo">
-                    <img src="logo.png" alt="樹脂流動解析技研">
+                    <img src="logo.png" alt="Kaiseki Giken">
                 </div>
                 <div class="inquiry">
-                    <button>お問い合わせ</button>
+                    <button>Contact Us</button>
                 </div>
             </div>
             <!-- Second row: Navigation and Social, centered and same gap as first row -->
             <div class="footer-row-horizontal">
                 <nav class="footer-nav">
                     <ul style="text-align: center;">
-                        <li><a href="index.html">ホーム</a></li>
-                        <li><a href="about.html">会社概要</a></li>
-                        <li><a href="services.html">サービス</a></li>
-                        <li><a href="blog.html">ブログ</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="index-en.html">Home</a></li>
+                        <li><a href="about-en.html">About</a></li>
+                        <li><a href="services-en.html">Services</a></li>
+                        <li><a href="blog-en.html">Blog</a></li>
+                        <li><a href="contact-en.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="social-media" style="text-align: center;">
-                    <h3>ソーシャル</h3>
+                    <h3>Social</h3>
                     <p>Facebook</p>
                     <p>Instagram</p>
                     <p>LinkedIn</p>
@@ -225,27 +208,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>プライバシーポリシー　Cookie（クッキー）ポリシー</p>
-            <p>© 2025 樹脂流動解析技研</p>
+            <p>Privacy Policy　Cookie Policy</p>
+            <p>© 2025 Kaiseki Giken</p>
         </div>
     </footer>
 
     <script>
-        function switchLang() {
-            var ja = document.getElementById('ja');
-            var en = document.getElementById('en');
-            var label = document.getElementById('lang-label');
-            if (ja.classList.contains('active')) {
-                ja.classList.remove('active');
-                en.classList.add('active');
-                label.innerHTML = 'English&nbsp;↔&nbsp;日本語';
-            } else {
-                en.classList.remove('active');
-                ja.classList.add('active');
-                label.innerHTML = '日本語&nbsp;↔&nbsp;English';
-            }
-        }
-
         function toggleSidebar() {
             var sidebar = document.getElementById('sidebar');
             var body = document.body;
